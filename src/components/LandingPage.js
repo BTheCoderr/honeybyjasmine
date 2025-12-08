@@ -190,7 +190,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf8f5] text-[#1a4d2e]">
+    <div className="min-h-screen bg-[#faf8f5] text-[#2d5016]">
       {/* Header and Navigation */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -198,8 +198,8 @@ const LandingPage = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <h1 className="text-2xl sm:text-3xl font-bold text-[#1a4d2e]">
-                <span>Honey</span>
-                <span className="font-serif italic">ByJasmine</span>
+                <span>THE BALANCED BITE</span>
+                <span className="block text-lg sm:text-xl font-script font-normal -mt-1">- honey by Jasmine</span>
               </h1>
             </div>
 
@@ -332,7 +332,7 @@ const LandingPage = () => {
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a4d2e] leading-tight mb-6">
               I take the stress out of eating better.
             </h2>
-            <p className="text-lg sm:text-xl text-[#1a4d2e] mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#2d5016] mb-8 leading-relaxed">
               Skip the grocery store stress and the takeout guilt. I cook fresh, balanced meals that save you time and money—and actually taste like home. No complicated plans, no judgment, just real food that fits your life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -964,9 +964,9 @@ const LandingPage = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
             <div>
-              <h3 className="text-2xl font-bold mb-4">
-                <span className="text-[#1a4d2e]">Honey</span>
-                <span>ByJasmine</span>
+              <h3 className="text-2xl font-bold mb-4 text-white">
+                <span>THE BALANCED BITE</span>
+                <span className="block text-base font-script font-normal -mt-1">- honey by Jasmine</span>
               </h3>
               <p className="text-gray-400 text-sm">
                 Fresh, balanced meals that make eating well feel easy.

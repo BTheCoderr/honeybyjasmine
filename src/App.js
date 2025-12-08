@@ -52,8 +52,8 @@ const OrderPage = () => {
               onClick={() => navigate('/')}
               className="text-2xl sm:text-3xl font-bold hover:opacity-80 transition-opacity"
             >
-              <span className="text-[#1a4d2e]">Honey</span>
-              <span className="text-[#1a4d2e] font-serif italic">ByJasmine</span>
+              <span className="text-[#1a4d2e]">THE BALANCED BITE</span>
+              <span className="block text-sm font-script font-normal -mt-1 text-[#1a4d2e]">- honey by Jasmine</span>
             </button>
             <button
               onClick={() => navigate('/')}
