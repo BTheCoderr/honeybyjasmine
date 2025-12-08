@@ -35,7 +35,7 @@ const meals = [
     protein: 18,
     tags: ['Vegetarian', 'Plant-Based'],
     allergens: [],
-    image: '/images/meals/Vegetarian Mediterranean Powerbowl.png'
+    image: '/images/meals/roastedVeggiesPestoOrzo.JPG'
   }
 ];
 
