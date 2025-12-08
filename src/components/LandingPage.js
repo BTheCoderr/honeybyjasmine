@@ -523,19 +523,19 @@ const LandingPage = () => {
           {/* Meal 2 */}
           <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all">
             <MealImage 
-              src="/images/meals/chicken-wrap.jpeg" 
-              alt="Mediterranean Chicken Wrap with hummus and fresh veggies"
-              mealName="Mediterranean Chicken Wrap"
+              src="/images/meals/Vegetarian Mediterranean Powerbowl.png" 
+              alt="Vegetarian Mediterranean Powerbowl"
+              mealName="Vegetarian Mediterranean Powerbowl"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Mediterranean Chicken Wrap</h3>
+            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Vegetarian Mediterranean Powerbowl</h3>
             <p className="text-[#5a5a5a] mb-3 text-sm">
-              Grilled chicken, hummus, fresh veggies, and tzatziki wrapped in a whole grain tortilla.
+              A vibrant bowl packed with Mediterranean flavors - chickpeas, roasted vegetables, olives, and fresh herbs over quinoa.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
-                Dairy Friendly
+                Plant-Based
               </span>
-              <span className="text-sm text-[#6a6a6a]">~380 cal</span>
+              <span className="text-sm text-[#6a6a6a]">~420 cal</span>
             </div>
           </div>
 
@@ -612,6 +612,101 @@ const LandingPage = () => {
                 High Protein
               </span>
               <span className="text-sm text-[#6a6a6a]">~460 cal</span>
+            </div>
+          </div>
+
+          {/* Meal 7 */}
+          <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all">
+            <MealImage 
+              src="/images/meals/Spinach-Artichoke topped salmon with sautéed green beans.png" 
+              alt="Spinach-Artichoke topped salmon with sautéed green beans"
+              mealName="Spinach-Artichoke Topped Salmon"
+            />
+            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Spinach-Artichoke Topped Salmon</h3>
+            <p className="text-[#5a5a5a] mb-3 text-sm">
+              Tender salmon fillet topped with creamy spinach-artichoke dip, served alongside perfectly sautéed green beans.
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
+                High Protein
+              </span>
+              <span className="text-sm text-[#6a6a6a]">~470 cal</span>
+            </div>
+          </div>
+
+          {/* Meal 8 */}
+          <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all">
+            <MealImage 
+              src="/images/meals/Golden Mac and cheese.png" 
+              alt="Golden Mac and cheese"
+              mealName="Golden Mac and Cheese"
+            />
+            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Golden Mac and Cheese</h3>
+            <p className="text-[#5a5a5a] mb-3 text-sm">
+              Creamy, golden macaroni and cheese with a perfectly crispy top. The ultimate comfort food, made with love.
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
+                Vegetarian
+              </span>
+              <span className="text-sm text-[#6a6a6a]">~520 cal</span>
+            </div>
+          </div>
+
+          {/* Meal 9 */}
+          <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all">
+            <MealImage 
+              src="/images/meals/Grinder Salad Italian.png" 
+              alt="Grinder Salad Italian"
+              mealName="Italian Grinder Salad"
+            />
+            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Italian Grinder Salad</h3>
+            <p className="text-[#5a5a5a] mb-3 text-sm">
+              All the flavors of your favorite Italian grinder in a fresh, deconstructed salad. Salami, provolone, peppers, and Italian dressing.
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
+                High Protein
+              </span>
+              <span className="text-sm text-[#6a6a6a]">~440 cal</span>
+            </div>
+          </div>
+
+          {/* Meal 10 */}
+          <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all">
+            <MealImage 
+              src="/images/meals/Hot honey bacon egg and cheese.png" 
+              alt="Hot honey bacon egg and cheese"
+              mealName="Hot Honey Bacon Egg & Cheese"
+            />
+            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Hot Honey Bacon Egg & Cheese</h3>
+            <p className="text-[#5a5a5a] mb-3 text-sm">
+              A breakfast favorite elevated with crispy bacon, perfectly cooked eggs, melted cheese, and a drizzle of spicy hot honey.
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
+                High Protein
+              </span>
+              <span className="text-sm text-[#6a6a6a]">~390 cal</span>
+            </div>
+          </div>
+
+          {/* Meal 11 */}
+          <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all">
+            <MealImage 
+              src="/images/meals/Bruschetta Dip.png" 
+              alt="Bruschetta Dip"
+              mealName="Bruschetta Dip"
+            />
+            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Bruschetta Dip</h3>
+            <p className="text-[#5a5a5a] mb-3 text-sm">
+              Fresh tomatoes, basil, garlic, and mozzarella in a creamy dip. Perfect for sharing or enjoying as a light meal with bread.
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
+                Vegetarian
+              </span>
+              <span className="text-sm text-[#6a6a6a]">~320 cal</span>
             </div>
           </div>
         </div>
