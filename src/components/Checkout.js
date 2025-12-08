@@ -56,7 +56,7 @@ const Checkout = ({ selectedMeals, personalization, onOrderComplete }) => {
     }
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
-    } else if (!/^[\d\s\-\(\)]+$/.test(formData.phone)) {
+    } else if (!/^[\d\s\-()]+$/.test(formData.phone)) {
       newErrors.phone = 'Phone number is invalid';
     }
     if (!formData.address.trim()) newErrors.address = 'Address is required';

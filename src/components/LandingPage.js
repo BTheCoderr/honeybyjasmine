@@ -451,9 +451,9 @@ const LandingPage = () => {
               <p className="text-[#5a5a5a] mb-4 leading-relaxed">
                 Complete packs for the entire week with balanced macros. Set it and forget it—your meals are ready.
               </p>
-              <a href="#" className="text-[#d4a574] hover:text-[#c8965f] font-semibold text-sm">
+              <button onClick={() => navigate('/order')} className="text-[#d4a574] hover:text-[#c8965f] font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded">
                 View options →
-              </a>
+              </button>
             </div>
 
             {/* Build Your Box */}
@@ -462,9 +462,9 @@ const LandingPage = () => {
               <p className="text-[#5a5a5a] mb-4 leading-relaxed">
                 Custom mix and match meals. Pick exactly what you want, when you want it. Full control, zero stress.
               </p>
-              <a href="#" className="text-[#d4a574] hover:text-[#c8965f] font-semibold text-sm">
+              <button onClick={() => navigate('/order')} className="text-[#d4a574] hover:text-[#c8965f] font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded">
                 Learn more →
-              </a>
+              </button>
             </div>
 
             {/* Honey Snacks */}
@@ -473,9 +473,9 @@ const LandingPage = () => {
               <p className="text-[#5a5a5a] mb-4 leading-relaxed">
                 Healthy snacks and treats that actually satisfy. Perfect for between meals or when you need a little something sweet.
               </p>
-              <a href="#" className="text-[#d4a574] hover:text-[#c8965f] font-semibold text-sm">
+              <button onClick={() => navigate('/order')} className="text-[#d4a574] hover:text-[#c8965f] font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded">
                 View options →
-              </a>
+              </button>
             </div>
 
             {/* Events and Catering */}
@@ -484,9 +484,9 @@ const LandingPage = () => {
               <p className="text-[#5a5a5a] mb-4 leading-relaxed">
                 Small gatherings, office lunches, and wellness events. Let me handle the food so you can enjoy the moment.
               </p>
-              <a href="#" className="text-[#d4a574] hover:text-[#c8965f] font-semibold text-sm">
+              <button onClick={() => navigate('/order')} className="text-[#d4a574] hover:text-[#c8965f] font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded">
                 Learn more →
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -936,7 +936,9 @@ const LandingPage = () => {
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
                   <a 
-                    href="#" 
+                    href="https://instagram.com/honeybyjasmine" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:text-[#d4a574] transition-colors flex items-center focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded"
                     aria-label="Follow on Instagram"
                   >
@@ -948,7 +950,9 @@ const LandingPage = () => {
                 </li>
                 <li>
                   <a 
-                    href="#" 
+                    href="https://tiktok.com/@honeybyjasmine" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:text-[#d4a574] transition-colors flex items-center focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded"
                     aria-label="Follow on TikTok"
                   >

@@ -11,7 +11,7 @@ import './App.css';
 const OrderPage = () => {
   const navigate = useNavigate();
   const [selectedMeals, setSelectedMeals] = useState([]);
-  const [personalization, setPersonalization] = useState({
+  const [personalization] = useState({
     mealPlan: 'Weekly',
     portionSize: 'Regular',
     dietaryPreferences: [],

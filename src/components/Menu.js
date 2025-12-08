@@ -2,8 +2,8 @@ import React, { useMemo } from 'react';
 import './Menu.css';
 import MealCard from './MealCard';
 
-const Menu = ({ personalization, addToCart }) => {
-  const meals = [
+// Move meals array outside component to avoid recreation on every render
+const meals = [
     {
       id: 1,
       name: 'Grilled Chicken & Quinoa Bowl',
@@ -92,8 +92,9 @@ const Menu = ({ personalization, addToCart }) => {
       allergens: ['Soy'],
       image: '🥢'
     }
-  ];
+];
 
+const Menu = ({ personalization, addToCart }) => {
   const filteredMeals = useMemo(() => {
     let filtered = [...meals];
 
