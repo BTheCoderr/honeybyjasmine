@@ -2,96 +2,129 @@ import React, { useMemo } from 'react';
 import './Menu.css';
 import MealCard from './MealCard';
 
-// Move meals array outside component to avoid recreation on every render
+// Actual meals from THE BALANCED BITE menu - matching the 11 images
 const meals = [
-    {
-      id: 1,
-      name: 'Grilled Chicken & Quinoa Bowl',
-      description: 'Tender grilled chicken with quinoa, roasted vegetables, and tahini dressing',
-      price: 12.99,
-      calories: 520,
-      protein: 45,
-      tags: ['High-Protein', 'Gluten-Free'],
-      allergens: ['Dairy'],
-      image: '🍗'
-    },
-    {
-      id: 2,
-      name: 'Mediterranean Salmon',
-      description: 'Herb-crusted salmon with couscous, Greek salad, and lemon vinaigrette',
-      price: 14.99,
-      calories: 580,
-      protein: 38,
-      tags: ['High-Protein'],
-      allergens: ['Fish'],
-      image: '🐟'
-    },
-    {
-      id: 3,
-      name: 'Vegan Buddha Bowl',
-      description: 'Chickpeas, sweet potato, kale, avocado, and quinoa with tahini dressing',
-      price: 11.99,
-      calories: 450,
-      protein: 18,
-      tags: ['Vegan', 'Vegetarian', 'Gluten-Free'],
-      allergens: [],
-      image: '🥗'
-    },
-    {
-      id: 4,
-      name: 'Keto Beef Stir-Fry',
-      description: 'Grass-fed beef with broccoli, bell peppers, and cauliflower rice',
-      price: 13.99,
-      calories: 420,
-      protein: 42,
-      tags: ['Keto', 'Low-Carb', 'High-Protein'],
-      allergens: ['Soy'],
-      image: '🥩'
-    },
-    {
-      id: 5,
-      name: 'Turkey & Sweet Potato',
-      description: 'Lean ground turkey with roasted sweet potato, green beans, and cranberry sauce',
-      price: 12.49,
-      calories: 480,
-      protein: 40,
-      tags: ['High-Protein', 'Gluten-Free'],
-      allergens: [],
-      image: '🦃'
-    },
-    {
-      id: 6,
-      name: 'Paleo Power Bowl',
-      description: 'Grilled chicken, sweet potato, Brussels sprouts, and avocado with olive oil',
-      price: 13.49,
-      calories: 510,
-      protein: 44,
-      tags: ['Paleo', 'Gluten-Free', 'Dairy-Free', 'High-Protein'],
-      allergens: [],
-      image: '💪'
-    },
-    {
-      id: 7,
-      name: 'Vegetarian Pasta Primavera',
-      description: 'Whole wheat pasta with seasonal vegetables, marinara, and parmesan',
-      price: 10.99,
-      calories: 490,
-      protein: 20,
-      tags: ['Vegetarian'],
-      allergens: ['Wheat', 'Dairy', 'Eggs'],
-      image: '🍝'
-    },
-    {
-      id: 8,
-      name: 'Asian Tofu Bowl',
-      description: 'Crispy tofu with brown rice, edamame, carrots, and ginger soy sauce',
-      price: 11.49,
-      calories: 440,
-      protein: 22,
-      tags: ['Vegan', 'Vegetarian'],
-      allergens: ['Soy'],
-      image: '🥢'
-    }
+  {
+    id: 1,
+    name: 'Pan-seared Salmon over Farro',
+    description: 'Pan-seared salmon served over farro with a butternut squash. A hearty, nutritious meal that\'s both satisfying and delicious.',
+    price: 12,
+    calories: 450,
+    protein: 35,
+    tags: ['High-Protein', 'Gluten-Free'],
+    allergens: ['Fish'],
+    image: '/images/meals/Pan-seared salmon over farro with a butternut squash.png'
+  },
+  {
+    id: 2,
+    name: 'Vegetarian Mediterranean Powerbowl',
+    description: 'A vibrant bowl packed with Mediterranean flavors - chickpeas, roasted vegetables, olives, and fresh herbs over quinoa.',
+    price: 12,
+    calories: 420,
+    protein: 18,
+    tags: ['Vegetarian', 'Plant-Based', 'Gluten-Free'],
+    allergens: [],
+    image: '/images/meals/Vegetarian Mediterranean Powerbowl.png'
+  },
+  {
+    id: 3,
+    name: 'Levantine Chickpea & Pomegranate Fattoush',
+    description: 'A vibrant Middle Eastern salad with chickpeas, fresh pomegranate seeds, herbs, and crispy bread. Fresh, flavorful, and plant-based.',
+    price: 12,
+    calories: 420,
+    protein: 15,
+    tags: ['Vegetarian', 'Plant-Based', 'Vegan'],
+    allergens: [],
+    image: '/images/meals/Levantine Chickpea & Pomegranate Fattoush.png'
+  },
+  {
+    id: 4,
+    name: 'Chicken Bacon Alfredo',
+    description: 'Creamy alfredo pasta with tender chicken and crispy bacon. A comforting, indulgent meal that hits all the right notes.',
+    price: 12,
+    calories: 410,
+    protein: 32,
+    tags: ['High-Protein'],
+    allergens: ['Wheat', 'Dairy'],
+    image: '/images/meals/Chicken Bacon Alfredo.png'
+  },
+  {
+    id: 5,
+    name: 'Herb-Crusted Salmon with Garlic Spinach Cream',
+    description: 'Perfectly seared salmon with a crispy herb crust, served over creamy garlic spinach. Elegant and full of flavor.',
+    price: 12,
+    calories: 480,
+    protein: 38,
+    tags: ['High-Protein', 'Gluten-Free'],
+    allergens: ['Fish', 'Dairy'],
+    image: '/images/meals/Herb-Crusted Salmon with Garlic Spinach Cream.jpeg'
+  },
+  {
+    id: 6,
+    name: 'Grilled Ribeye over Caesar Salad',
+    description: 'Tender grilled ribeye steak served over a classic Caesar salad with homemade croutons. A protein-packed, satisfying meal.',
+    price: 12,
+    calories: 460,
+    protein: 42,
+    tags: ['High-Protein'],
+    allergens: ['Dairy', 'Eggs'],
+    image: '/images/meals/Grilled ribeye over a Caesar salad with homemade croutons.png'
+  },
+  {
+    id: 7,
+    name: 'Spinach-Artichoke Topped Salmon',
+    description: 'Tender salmon fillet topped with creamy spinach-artichoke dip, served alongside perfectly sautéed green beans.',
+    price: 12,
+    calories: 470,
+    protein: 36,
+    tags: ['High-Protein', 'Gluten-Free'],
+    allergens: ['Fish', 'Dairy'],
+    image: '/images/meals/Spinach-Artichoke topped salmon with sautéed green beans.png'
+  },
+  {
+    id: 8,
+    name: 'Golden Mac and Cheese',
+    description: 'Creamy, golden macaroni and cheese with a perfectly crispy top. The ultimate comfort food, made with love.',
+    price: 12,
+    calories: 520,
+    protein: 20,
+    tags: ['Vegetarian'],
+    allergens: ['Wheat', 'Dairy', 'Eggs'],
+    image: '/images/meals/Golden Mac and cheese.png'
+  },
+  {
+    id: 9,
+    name: 'Italian Grinder Salad',
+    description: 'All the flavors of your favorite Italian grinder in a fresh, deconstructed salad. Salami, provolone, peppers, and Italian dressing.',
+    price: 12,
+    calories: 440,
+    protein: 28,
+    tags: ['High-Protein'],
+    allergens: ['Dairy'],
+    image: '/images/meals/Grinder Salad Italian.png'
+  },
+  {
+    id: 10,
+    name: 'Hot Honey Bacon Egg & Cheese',
+    description: 'A breakfast favorite elevated with crispy bacon, perfectly cooked eggs, melted cheese, and a drizzle of spicy hot honey.',
+    price: 12,
+    calories: 390,
+    protein: 24,
+    tags: ['High-Protein'],
+    allergens: ['Eggs', 'Dairy'],
+    image: '/images/meals/Hot honey bacon egg and cheese.png'
+  },
+  {
+    id: 11,
+    name: 'Bruschetta Dip',
+    description: 'Fresh tomatoes, basil, garlic, and mozzarella in a creamy dip. Perfect for sharing or enjoying as a light meal with bread.',
+    price: 12,
+    calories: 320,
+    protein: 12,
+    tags: ['Vegetarian'],
+    allergens: ['Dairy'],
+    image: '/images/meals/Bruschetta Dip.png'
+  }
 ];
 
 const Menu = ({ personalization, addToCart }) => {

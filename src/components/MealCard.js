@@ -10,9 +10,24 @@ const MealCard = ({ meal, price, portionSize, addToCart }) => {
     });
   };
 
+  // Encode image path to handle spaces and special characters
+  const encodedImageSrc = meal.image.split('/').map((part, index) => 
+    index === meal.image.split('/').length - 1 ? encodeURIComponent(part) : part
+  ).join('/');
+
   return (
     <div className="meal-card">
-      <div className="meal-image">{meal.image}</div>
+      <div className="meal-image">
+        <img 
+          src={encodedImageSrc} 
+          alt={meal.name}
+          onError={(e) => {
+            // Fallback to gradient background if image fails to load
+            e.target.style.display = 'none';
+            e.target.parentElement.innerHTML = '';
+          }}
+        />
+      </div>
       <div className="meal-content">
         <div className="meal-header">
           <h3>{meal.name}</h3>
