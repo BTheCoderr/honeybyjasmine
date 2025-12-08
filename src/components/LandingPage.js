@@ -7,7 +7,7 @@ const MealImage = ({ src, alt, mealName }) => {
 
   if (imageError) {
     return (
-      <div className="bg-gradient-to-br from-[#d4a574] to-[#c8965f] rounded-xl h-48 flex items-center justify-center">
+      <div className="bg-gradient-to-br from-[#1a4d2e] to-[#2d5016] rounded-xl h-48 flex items-center justify-center">
         <span className="text-white text-sm font-semibold">Meal Photo</span>
       </div>
     );
@@ -190,16 +190,16 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf8f5] text-[#3a3a3a]">
+    <div className="min-h-screen bg-[#faf8f5] text-[#1a4d2e]">
       {/* Header and Navigation */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-2xl sm:text-3xl font-bold">
-                <span className="text-[#d4a574]">Honey</span>
-                <span className="text-[#8b6f47]">ByJasmine</span>
+              <h1 className="text-2xl sm:text-3xl font-bold text-[#1a4d2e]">
+                <span>Honey</span>
+                <span className="font-serif italic">ByJasmine</span>
               </h1>
             </div>
 
@@ -208,7 +208,7 @@ const LandingPage = () => {
               <a 
                 href="#weekly-menu" 
                 onClick={(e) => handleAnchorClick(e, 'weekly-menu')}
-                className="text-[#3a3a3a] hover:text-[#d4a574] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:ring-offset-2 rounded"
+                className="text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2 rounded"
                 aria-label="Navigate to Weekly Menu section"
               >
                 Weekly Menu
@@ -216,7 +216,7 @@ const LandingPage = () => {
               <a 
                 href="#meal-plans" 
                 onClick={(e) => handleAnchorClick(e, 'meal-plans')}
-                className="text-[#3a3a3a] hover:text-[#d4a574] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:ring-offset-2 rounded"
+                className="text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2 rounded"
                 aria-label="Navigate to Meal Plans section"
               >
                 Meal Plans
@@ -224,7 +224,7 @@ const LandingPage = () => {
               <a 
                 href="#how-it-works" 
                 onClick={(e) => handleAnchorClick(e, 'how-it-works')}
-                className="text-[#3a3a3a] hover:text-[#d4a574] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:ring-offset-2 rounded"
+                className="text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2 rounded"
                 aria-label="Navigate to How It Works section"
               >
                 How It Works
@@ -232,7 +232,7 @@ const LandingPage = () => {
               <a 
                 href="#about" 
                 onClick={(e) => handleAnchorClick(e, 'about')}
-                className="text-[#3a3a3a] hover:text-[#d4a574] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:ring-offset-2 rounded"
+                className="text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2 rounded"
                 aria-label="Navigate to About Jasmine section"
               >
                 About Jasmine
@@ -240,14 +240,14 @@ const LandingPage = () => {
               <a 
                 href="#contact" 
                 onClick={(e) => handleAnchorClick(e, 'contact')}
-                className="text-[#3a3a3a] hover:text-[#d4a574] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:ring-offset-2 rounded"
+                className="text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2 rounded"
                 aria-label="Navigate to Contact section"
               >
                 Contact
               </a>
               <button 
                 onClick={() => navigate('/order')}
-                className="bg-[#d4a574] hover:bg-[#c8965f] text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:ring-offset-2"
+                className="bg-[#1a4d2e] hover:bg-[#2d5016] text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2"
                 aria-label="Order meals now"
               >
                 Order Now
@@ -276,7 +276,7 @@ const LandingPage = () => {
               <a 
                 href="#weekly-menu" 
                 onClick={(e) => handleAnchorClick(e, 'weekly-menu')}
-                className="block text-[#3a3a3a] hover:text-[#d4a574] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded px-2 py-1"
+                className="block text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded px-2 py-1"
                 aria-label="Navigate to Weekly Menu section"
               >
                 Weekly Menu
@@ -284,7 +284,7 @@ const LandingPage = () => {
               <a 
                 href="#meal-plans" 
                 onClick={(e) => handleAnchorClick(e, 'meal-plans')}
-                className="block text-[#3a3a3a] hover:text-[#d4a574] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded px-2 py-1"
+                className="block text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded px-2 py-1"
                 aria-label="Navigate to Meal Plans section"
               >
                 Meal Plans
@@ -292,7 +292,7 @@ const LandingPage = () => {
               <a 
                 href="#how-it-works" 
                 onClick={(e) => handleAnchorClick(e, 'how-it-works')}
-                className="block text-[#3a3a3a] hover:text-[#d4a574] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded px-2 py-1"
+                className="block text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded px-2 py-1"
                 aria-label="Navigate to How It Works section"
               >
                 How It Works
@@ -300,7 +300,7 @@ const LandingPage = () => {
               <a 
                 href="#about" 
                 onClick={(e) => handleAnchorClick(e, 'about')}
-                className="block text-[#3a3a3a] hover:text-[#d4a574] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded px-2 py-1"
+                className="block text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded px-2 py-1"
                 aria-label="Navigate to About Jasmine section"
               >
                 About Jasmine
@@ -308,14 +308,14 @@ const LandingPage = () => {
               <a 
                 href="#contact" 
                 onClick={(e) => handleAnchorClick(e, 'contact')}
-                className="block text-[#3a3a3a] hover:text-[#d4a574] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded px-2 py-1"
+                className="block text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded px-2 py-1"
                 aria-label="Navigate to Contact section"
               >
                 Contact
               </a>
               <button 
                 onClick={() => navigate('/order')}
-                className="w-full bg-[#d4a574] hover:bg-[#c8965f] text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:ring-offset-2"
+                className="w-full bg-[#1a4d2e] hover:bg-[#2d5016] text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2"
                 aria-label="Order meals now"
               >
                 Order Now
@@ -329,34 +329,34 @@ const LandingPage = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#3a3a3a] leading-tight mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a4d2e] leading-tight mb-6">
               I take the stress out of eating better.
             </h2>
-            <p className="text-lg sm:text-xl text-[#5a5a5a] mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#1a4d2e] mb-8 leading-relaxed">
               Skip the grocery store stress and the takeout guilt. I cook fresh, balanced meals that save you time and money—and actually taste like home. No complicated plans, no judgment, just real food that fits your life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <button 
                 onClick={() => navigate('/order')}
-                className="bg-[#d4a574] hover:bg-[#c8965f] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:ring-offset-2"
+                className="bg-[#1a4d2e] hover:bg-[#2d5016] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2"
                 aria-label="Order this week's menu"
               >
                 Order This Week's Menu
               </button>
               <button 
                 onClick={(e) => handleAnchorClick(e, 'how-it-works')}
-                className="bg-white hover:bg-[#f5f0e8] text-[#8b6f47] border-2 border-[#d4a574] px-8 py-4 rounded-full font-semibold text-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:ring-offset-2"
+                className="bg-white hover:bg-[#f5f0e8] text-[#1a4d2e] border-2 border-[#1a4d2e] px-8 py-4 rounded-full font-semibold text-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2"
                 aria-label="Learn how it works"
               >
                 See How It Works
               </button>
             </div>
-            <p className="text-sm text-[#6a6a6a] italic">
+            <p className="text-sm text-[#2d5016] italic">
               Fresh, portion balanced meals, ready in minutes.
             </p>
           </div>
           <div className="hidden lg:block">
-            <div className="bg-gradient-to-br from-[#d4a574] to-[#c8965f] rounded-3xl aspect-square shadow-2xl overflow-hidden relative">
+            <div className="bg-gradient-to-br from-[#1a4d2e] to-[#2d5016] rounded-3xl aspect-square shadow-2xl overflow-hidden relative">
               <img 
                 src="/images/hero/hero-main.jpg" 
                 alt="Fresh, healthy meal prep dishes from HoneyByJasmine"
@@ -389,33 +389,33 @@ const LandingPage = () => {
           <div className="grid sm:grid-cols-3 gap-6 lg:gap-8">
             {/* Card 1 */}
             <div className="bg-[#faf8f5] rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-[#d4a574] rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-[#1a4d2e] rounded-full flex items-center justify-center mb-6">
                 <span className="text-3xl font-bold text-white">1</span>
               </div>
-              <h3 className="text-2xl font-bold text-[#3a3a3a] mb-4">Pick your meals</h3>
-              <p className="text-[#5a5a5a] leading-relaxed">
+              <h3 className="text-2xl font-bold text-[#1a4d2e] mb-4">Pick your meals</h3>
+              <p className="text-[#1a4d2e] leading-relaxed">
                 Choose from my weekly rotating menu of balanced, delicious options. Mix and match to fit your taste and goals.
               </p>
             </div>
 
             {/* Card 2 */}
             <div className="bg-[#faf8f5] rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-[#d4a574] rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-[#1a4d2e] rounded-full flex items-center justify-center mb-6">
                 <span className="text-3xl font-bold text-white">2</span>
               </div>
-              <h3 className="text-2xl font-bold text-[#3a3a3a] mb-4">I cook with love</h3>
-              <p className="text-[#5a5a5a] leading-relaxed">
+              <h3 className="text-2xl font-bold text-[#1a4d2e] mb-4">I cook with love</h3>
+              <p className="text-[#1a4d2e] leading-relaxed">
                 I prep, portion, and pack every meal fresh. Think home-cooked quality, better than restaurant consistency.
               </p>
             </div>
 
             {/* Card 3 */}
             <div className="bg-[#faf8f5] rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-[#d4a574] rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-[#1a4d2e] rounded-full flex items-center justify-center mb-6">
                 <span className="text-3xl font-bold text-white">3</span>
               </div>
-              <h3 className="text-2xl font-bold text-[#3a3a3a] mb-4">Heat, eat, and repeat</h3>
-              <p className="text-[#5a5a5a] leading-relaxed">
+              <h3 className="text-2xl font-bold text-[#1a4d2e] mb-4">Heat, eat, and repeat</h3>
+              <p className="text-[#1a4d2e] leading-relaxed">
                 Reheat in minutes and stay on track all week. No meal prep Sunday stress—just good food, ready when you are.
               </p>
             </div>
@@ -425,10 +425,10 @@ const LandingPage = () => {
 
       {/* Welcome Section */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#3a3a3a] mb-6 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#1a4d2e] mb-6 text-center">
           Welcome to HoneyByJasmine
         </h2>
-        <div className="space-y-4 text-lg text-[#5a5a5a] leading-relaxed">
+        <div className="space-y-4 text-lg text-[#1a4d2e] leading-relaxed">
           <p>
             I help busy people eat better without the guilt or overwhelm. This isn't about perfect meal plans or rigid rules—it's about real support for real lives.
           </p>
@@ -441,50 +441,50 @@ const LandingPage = () => {
       {/* Service Categories Grid */}
       <section id="meal-plans" className="bg-white py-16 sm:py-20 scroll-offset">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#3a3a3a] mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1a4d2e] mb-12 text-center">
             How I Can Help
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {/* Weekly Meal Plans */}
             <div className="bg-[#faf8f5] rounded-2xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
-              <h3 className="text-xl font-bold text-[#3a3a3a] mb-3">Weekly Meal Plans</h3>
-              <p className="text-[#5a5a5a] mb-4 leading-relaxed">
+              <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">Weekly Meal Plans</h3>
+              <p className="text-[#1a4d2e] mb-4 leading-relaxed">
                 Complete packs for the entire week with balanced macros. Set it and forget it—your meals are ready.
               </p>
-              <button onClick={() => navigate('/order')} className="text-[#d4a574] hover:text-[#c8965f] font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded">
+              <button onClick={() => navigate('/order')} className="text-[#1a4d2e] hover:text-[#2d5016] font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded">
                 View options →
               </button>
             </div>
 
             {/* Build Your Box */}
             <div className="bg-[#faf8f5] rounded-2xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
-              <h3 className="text-xl font-bold text-[#3a3a3a] mb-3">Build Your Box</h3>
-              <p className="text-[#5a5a5a] mb-4 leading-relaxed">
+              <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">Build Your Box</h3>
+              <p className="text-[#1a4d2e] mb-4 leading-relaxed">
                 Custom mix and match meals. Pick exactly what you want, when you want it. Full control, zero stress.
               </p>
-              <button onClick={() => navigate('/order')} className="text-[#d4a574] hover:text-[#c8965f] font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded">
+              <button onClick={() => navigate('/order')} className="text-[#1a4d2e] hover:text-[#2d5016] font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded">
                 Learn more →
               </button>
             </div>
 
             {/* Honey Snacks */}
             <div className="bg-[#faf8f5] rounded-2xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
-              <h3 className="text-xl font-bold text-[#3a3a3a] mb-3">Honey Snacks</h3>
-              <p className="text-[#5a5a5a] mb-4 leading-relaxed">
+              <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">Honey Snacks</h3>
+              <p className="text-[#1a4d2e] mb-4 leading-relaxed">
                 Healthy snacks and treats that actually satisfy. Perfect for between meals or when you need a little something sweet.
               </p>
-              <button onClick={() => navigate('/order')} className="text-[#d4a574] hover:text-[#c8965f] font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded">
+              <button onClick={() => navigate('/order')} className="text-[#1a4d2e] hover:text-[#2d5016] font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded">
                 View options →
               </button>
             </div>
 
             {/* Events and Catering */}
             <div className="bg-[#faf8f5] rounded-2xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
-              <h3 className="text-xl font-bold text-[#3a3a3a] mb-3">Events and Catering</h3>
-              <p className="text-[#5a5a5a] mb-4 leading-relaxed">
+              <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">Events and Catering</h3>
+              <p className="text-[#1a4d2e] mb-4 leading-relaxed">
                 Small gatherings, office lunches, and wellness events. Let me handle the food so you can enjoy the moment.
               </p>
-              <button onClick={() => navigate('/order')} className="text-[#d4a574] hover:text-[#c8965f] font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded">
+              <button onClick={() => navigate('/order')} className="text-[#1a4d2e] hover:text-[#2d5016] font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded">
                 Learn more →
               </button>
             </div>
@@ -494,10 +494,10 @@ const LandingPage = () => {
 
       {/* Featured Weekly Menu Preview */}
       <section id="weekly-menu" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 scroll-offset">
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#3a3a3a] mb-4 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#1a4d2e] mb-4 text-center">
           This Week's Honey Menu
         </h2>
-        <p className="text-center text-[#5a5a5a] mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-[#1a4d2e] mb-12 max-w-2xl mx-auto">
           Fresh flavors rotate every week, and spots fill up fast. Order by Wednesday for this week's delivery.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
@@ -508,15 +508,15 @@ const LandingPage = () => {
               alt="Pan-seared salmon over farro with butternut squash"
               mealName="Pan-seared Salmon over Farro"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Pan-seared Salmon over Farro</h3>
-            <p className="text-[#5a5a5a] mb-3 text-sm">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-2">Pan-seared Salmon over Farro</h3>
+            <p className="text-[#1a4d2e] mb-3 text-sm">
               Pan-seared salmon served over farro with a butternut squash. A hearty, nutritious meal that's both satisfying and delicious.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
                 High Protein
               </span>
-              <span className="text-sm text-[#6a6a6a]">~450 cal</span>
+              <span className="text-sm text-[#2d5016]">~450 cal</span>
             </div>
           </div>
 
@@ -527,15 +527,15 @@ const LandingPage = () => {
               alt="Vegetarian Mediterranean Powerbowl"
               mealName="Vegetarian Mediterranean Powerbowl"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Vegetarian Mediterranean Powerbowl</h3>
-            <p className="text-[#5a5a5a] mb-3 text-sm">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-2">Vegetarian Mediterranean Powerbowl</h3>
+            <p className="text-[#1a4d2e] mb-3 text-sm">
               A vibrant bowl packed with Mediterranean flavors - chickpeas, roasted vegetables, olives, and fresh herbs over quinoa.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
                 Plant-Based
               </span>
-              <span className="text-sm text-[#6a6a6a]">~420 cal</span>
+              <span className="text-sm text-[#2d5016]">~420 cal</span>
             </div>
           </div>
 
@@ -546,15 +546,15 @@ const LandingPage = () => {
               alt="Levantine Chickpea & Pomegranate Fattoush"
               mealName="Levantine Chickpea & Pomegranate Fattoush"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Levantine Chickpea & Pomegranate Fattoush</h3>
-            <p className="text-[#5a5a5a] mb-3 text-sm">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-2">Levantine Chickpea & Pomegranate Fattoush</h3>
+            <p className="text-[#1a4d2e] mb-3 text-sm">
               A vibrant Middle Eastern salad with chickpeas, fresh pomegranate seeds, herbs, and crispy bread. Fresh, flavorful, and plant-based.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
                 Plant-Based
               </span>
-              <span className="text-sm text-[#6a6a6a]">~420 cal</span>
+              <span className="text-sm text-[#2d5016]">~420 cal</span>
             </div>
           </div>
 
@@ -565,15 +565,15 @@ const LandingPage = () => {
               alt="Chicken Bacon Alfredo"
               mealName="Chicken Bacon Alfredo"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Chicken Bacon Alfredo</h3>
-            <p className="text-[#5a5a5a] mb-3 text-sm">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-2">Chicken Bacon Alfredo</h3>
+            <p className="text-[#1a4d2e] mb-3 text-sm">
               Creamy alfredo pasta with tender chicken and crispy bacon. A comforting, indulgent meal that hits all the right notes.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
                 High Protein
               </span>
-              <span className="text-sm text-[#6a6a6a]">~410 cal</span>
+              <span className="text-sm text-[#2d5016]">~410 cal</span>
             </div>
           </div>
 
@@ -584,15 +584,15 @@ const LandingPage = () => {
               alt="Herb-Crusted Salmon with Garlic Spinach Cream"
               mealName="Herb-Crusted Salmon with Garlic Spinach Cream"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Herb-Crusted Salmon with Garlic Spinach Cream</h3>
-            <p className="text-[#5a5a5a] mb-3 text-sm">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-2">Herb-Crusted Salmon with Garlic Spinach Cream</h3>
+            <p className="text-[#1a4d2e] mb-3 text-sm">
               Perfectly seared salmon with a crispy herb crust, served over creamy garlic spinach. Elegant and full of flavor.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
                 Gluten Free
               </span>
-              <span className="text-sm text-[#6a6a6a]">~480 cal</span>
+              <span className="text-sm text-[#2d5016]">~480 cal</span>
             </div>
           </div>
 
@@ -603,15 +603,15 @@ const LandingPage = () => {
               alt="Grilled ribeye over a Caesar salad with homemade croutons"
               mealName="Grilled Ribeye over Caesar Salad"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Grilled Ribeye over Caesar Salad</h3>
-            <p className="text-[#5a5a5a] mb-3 text-sm">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-2">Grilled Ribeye over Caesar Salad</h3>
+            <p className="text-[#1a4d2e] mb-3 text-sm">
               Tender grilled ribeye steak served over a classic Caesar salad with homemade croutons. A protein-packed, satisfying meal.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
                 High Protein
               </span>
-              <span className="text-sm text-[#6a6a6a]">~460 cal</span>
+              <span className="text-sm text-[#2d5016]">~460 cal</span>
             </div>
           </div>
 
@@ -622,15 +622,15 @@ const LandingPage = () => {
               alt="Spinach-Artichoke topped salmon with sautéed green beans"
               mealName="Spinach-Artichoke Topped Salmon"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Spinach-Artichoke Topped Salmon</h3>
-            <p className="text-[#5a5a5a] mb-3 text-sm">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-2">Spinach-Artichoke Topped Salmon</h3>
+            <p className="text-[#1a4d2e] mb-3 text-sm">
               Tender salmon fillet topped with creamy spinach-artichoke dip, served alongside perfectly sautéed green beans.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
                 High Protein
               </span>
-              <span className="text-sm text-[#6a6a6a]">~470 cal</span>
+              <span className="text-sm text-[#2d5016]">~470 cal</span>
             </div>
           </div>
 
@@ -641,15 +641,15 @@ const LandingPage = () => {
               alt="Golden Mac and cheese"
               mealName="Golden Mac and Cheese"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Golden Mac and Cheese</h3>
-            <p className="text-[#5a5a5a] mb-3 text-sm">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-2">Golden Mac and Cheese</h3>
+            <p className="text-[#1a4d2e] mb-3 text-sm">
               Creamy, golden macaroni and cheese with a perfectly crispy top. The ultimate comfort food, made with love.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
                 Vegetarian
               </span>
-              <span className="text-sm text-[#6a6a6a]">~520 cal</span>
+              <span className="text-sm text-[#2d5016]">~520 cal</span>
             </div>
           </div>
 
@@ -660,15 +660,15 @@ const LandingPage = () => {
               alt="Grinder Salad Italian"
               mealName="Italian Grinder Salad"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Italian Grinder Salad</h3>
-            <p className="text-[#5a5a5a] mb-3 text-sm">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-2">Italian Grinder Salad</h3>
+            <p className="text-[#1a4d2e] mb-3 text-sm">
               All the flavors of your favorite Italian grinder in a fresh, deconstructed salad. Salami, provolone, peppers, and Italian dressing.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
                 High Protein
               </span>
-              <span className="text-sm text-[#6a6a6a]">~440 cal</span>
+              <span className="text-sm text-[#2d5016]">~440 cal</span>
             </div>
           </div>
 
@@ -679,15 +679,15 @@ const LandingPage = () => {
               alt="Hot honey bacon egg and cheese"
               mealName="Hot Honey Bacon Egg & Cheese"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Hot Honey Bacon Egg & Cheese</h3>
-            <p className="text-[#5a5a5a] mb-3 text-sm">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-2">Hot Honey Bacon Egg & Cheese</h3>
+            <p className="text-[#1a4d2e] mb-3 text-sm">
               A breakfast favorite elevated with crispy bacon, perfectly cooked eggs, melted cheese, and a drizzle of spicy hot honey.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
                 High Protein
               </span>
-              <span className="text-sm text-[#6a6a6a]">~390 cal</span>
+              <span className="text-sm text-[#2d5016]">~390 cal</span>
             </div>
           </div>
 
@@ -698,22 +698,22 @@ const LandingPage = () => {
               alt="Bruschetta Dip"
               mealName="Bruschetta Dip"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Bruschetta Dip</h3>
-            <p className="text-[#5a5a5a] mb-3 text-sm">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-2">Bruschetta Dip</h3>
+            <p className="text-[#1a4d2e] mb-3 text-sm">
               Fresh tomatoes, basil, garlic, and mozzarella in a creamy dip. Perfect for sharing or enjoying as a light meal with bread.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
                 Vegetarian
               </span>
-              <span className="text-sm text-[#6a6a6a]">~320 cal</span>
+              <span className="text-sm text-[#2d5016]">~320 cal</span>
             </div>
           </div>
         </div>
         <div className="text-center">
           <button 
             onClick={() => navigate('/order')}
-            className="bg-[#d4a574] hover:bg-[#c8965f] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:ring-offset-2"
+            className="bg-[#1a4d2e] hover:bg-[#2d5016] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2"
             aria-label="View full menu and place order"
           >
             View Full Menu and Order
@@ -725,10 +725,10 @@ const LandingPage = () => {
       <section className="bg-gradient-to-br from-[#faf8f5] to-[#f5f0e8] py-16 sm:py-20">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-lg border border-[#e8e0d5]">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#3a3a3a] mb-4 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a4d2e] mb-4 text-center">
               Join The Honey List
             </h2>
-            <p className="text-center text-[#5a5a5a] mb-8 leading-relaxed">
+            <p className="text-center text-[#1a4d2e] mb-8 leading-relaxed">
               Subscribers get first access to the weekly menu, sold-out alerts, and occasional tips from me. No spam, just the good stuff.
             </p>
             <form onSubmit={handleEmailSubmit} className="space-y-4" noValidate>
@@ -747,7 +747,7 @@ const LandingPage = () => {
                     className={`w-full px-4 py-3 rounded-lg border ${
                       formErrors.firstName 
                         ? 'border-red-400 focus:ring-red-400' 
-                        : 'border-[#e8e0d5] focus:ring-[#d4a574]'
+                        : 'border-[#e8e0d5] focus:ring-[#1a4d2e]'
                     } focus:outline-none focus:ring-2 focus:border-transparent transition-colors`}
                   />
                   {formErrors.firstName && (
@@ -770,7 +770,7 @@ const LandingPage = () => {
                     className={`w-full px-4 py-3 rounded-lg border ${
                       formErrors.email 
                         ? 'border-red-400 focus:ring-red-400' 
-                        : 'border-[#e8e0d5] focus:ring-[#d4a574]'
+                        : 'border-[#e8e0d5] focus:ring-[#1a4d2e]'
                     } focus:outline-none focus:ring-2 focus:border-transparent transition-colors`}
                   />
                   {formErrors.email && (
@@ -788,7 +788,7 @@ const LandingPage = () => {
                   onChange={handleInputChange}
                   placeholder="City or area (optional)"
                   aria-label="City or area (optional)"
-                  className="w-full px-4 py-3 rounded-lg border border-[#e8e0d5] focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-lg border border-[#e8e0d5] focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent"
                 />
               </div>
               {formErrors.submit && (
@@ -804,7 +804,7 @@ const LandingPage = () => {
               )}
               <button
                 type="submit"
-                className="w-full bg-[#d4a574] hover:bg-[#c8965f] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full bg-[#1a4d2e] hover:bg-[#2d5016] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 disabled={isSubmitting || formSubmitted}
                 aria-label="Submit email signup form"
               >
@@ -829,27 +829,27 @@ const LandingPage = () => {
 
       {/* Social Proof and Testimonials */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#3a3a3a] mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#1a4d2e] mb-12 text-center">
           What my clients are saying
         </h2>
         <div className="grid sm:grid-cols-3 gap-6 lg:gap-8">
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <p className="text-[#5a5a5a] mb-4 italic leading-relaxed">
+            <p className="text-[#1a4d2e] mb-4 italic leading-relaxed">
               "Jasmine's meals saved me so much time during the week. I actually look forward to eating healthy now, and the food tastes incredible."
             </p>
-            <p className="text-[#3a3a3a] font-semibold">— Sarah M.</p>
+            <p className="text-[#1a4d2e] font-semibold">— Sarah M.</p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <p className="text-[#5a5a5a] mb-4 italic leading-relaxed">
+            <p className="text-[#1a4d2e] mb-4 italic leading-relaxed">
               "I've tried meal prep services before, but nothing compares. The portions are perfect, and I've been consistent for months now."
             </p>
-            <p className="text-[#3a3a3a] font-semibold">— Michael T.</p>
+            <p className="text-[#1a4d2e] font-semibold">— Michael T.</p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <p className="text-[#5a5a5a] mb-4 italic leading-relaxed">
+            <p className="text-[#1a4d2e] mb-4 italic leading-relaxed">
               "As someone new to meal prepping, Jasmine made it so easy. No judgment, just delicious food that fits my lifestyle."
             </p>
-            <p className="text-[#3a3a3a] font-semibold">— Jessica L.</p>
+            <p className="text-[#1a4d2e] font-semibold">— Jessica L.</p>
           </div>
         </div>
       </section>
@@ -857,12 +857,12 @@ const LandingPage = () => {
       {/* About Jasmine */}
       <section id="about" className="bg-white py-16 sm:py-20 scroll-offset">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#3a3a3a] mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1a4d2e] mb-12 text-center">
             Meet Jasmine
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="flex justify-center lg:justify-end">
-              <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full shadow-xl overflow-hidden bg-gradient-to-br from-[#d4a574] to-[#c8965f] flex items-center justify-center">
+              <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full shadow-xl overflow-hidden bg-gradient-to-br from-[#1a4d2e] to-[#2d5016] flex items-center justify-center">
                 <img
                   src="/images/about/jasmine-photo.jpg"
                   alt="Jasmine, founder of HoneyByJasmine"
@@ -879,7 +879,7 @@ const LandingPage = () => {
                 />
               </div>
             </div>
-            <div className="space-y-4 text-lg text-[#5a5a5a] leading-relaxed">
+            <div className="space-y-4 text-lg text-[#1a4d2e] leading-relaxed">
               <p>
                 Hi, I'm Jasmine. I started HoneyByJasmine because I was tired of choosing between eating well and having a life. After years of juggling work, family, and trying to stay healthy, I realized that meal prep shouldn't feel like a chore—it should feel like someone's taking care of you.
               </p>
@@ -896,49 +896,49 @@ const LandingPage = () => {
 
       {/* FAQ Section */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#3a3a3a] mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#1a4d2e] mb-12 text-center">
           Questions, answered
         </h2>
         <div className="space-y-6">
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-3">How does delivery or pickup work?</h3>
-            <p className="text-[#5a5a5a] leading-relaxed">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">How does delivery or pickup work?</h3>
+            <p className="text-[#1a4d2e] leading-relaxed">
               I offer both local delivery and pickup options. Delivery is available within a 15-mile radius, and pickup is available at my kitchen location. You'll receive specific details and time slots when you place your order.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-3">When do I need to order by?</h3>
-            <p className="text-[#5a5a5a] leading-relaxed">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">When do I need to order by?</h3>
+            <p className="text-[#1a4d2e] leading-relaxed">
               Orders for the weekly menu close every Wednesday at 11:59 PM. This gives me time to shop, prep, and cook fresh meals for delivery or pickup on Friday and Saturday.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-3">Can you accommodate allergies and dietary preferences?</h3>
-            <p className="text-[#5a5a5a] leading-relaxed">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">Can you accommodate allergies and dietary preferences?</h3>
+            <p className="text-[#1a4d2e] leading-relaxed">
               Absolutely! I can accommodate most dietary needs including gluten-free, dairy-free, vegetarian, and vegan options. Just note your preferences when ordering, and I'll make sure your meals are prepared accordingly.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-3">How do I reheat the meals?</h3>
-            <p className="text-[#5a5a5a] leading-relaxed">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">How do I reheat the meals?</h3>
+            <p className="text-[#1a4d2e] leading-relaxed">
               Most meals can be reheated in the microwave in 2-3 minutes, or in the oven at 350°F for 10-15 minutes. Each meal comes with specific reheating instructions to ensure the best taste and texture.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-3">Can I skip a week or cancel my order?</h3>
-            <p className="text-[#5a5a5a] leading-relaxed">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">Can I skip a week or cancel my order?</h3>
+            <p className="text-[#1a4d2e] leading-relaxed">
               Yes! You can skip any week or cancel your order up to 24 hours before the order deadline (Tuesday at 11:59 PM). Just reach out to me directly, and I'll take care of it.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-3">How long do the meals stay fresh?</h3>
-            <p className="text-[#5a5a5a] leading-relaxed">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">How long do the meals stay fresh?</h3>
+            <p className="text-[#1a4d2e] leading-relaxed">
               All meals are prepared fresh and can be stored in the refrigerator for up to 5 days. They're packaged in airtight containers to maintain freshness and flavor.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-3">Do you offer meal plans or just individual meals?</h3>
-            <p className="text-[#5a5a5a] leading-relaxed">
+            <h3 className="text-xl font-bold text-[#1a4d2e] mb-3">Do you offer meal plans or just individual meals?</h3>
+            <p className="text-[#1a4d2e] leading-relaxed">
               I offer both! You can order individual meals a la carte, or choose from weekly meal plans that include breakfast, lunch, and dinner options. Meal plans come with a discount and make it even easier to stay on track.
             </p>
           </div>
@@ -949,7 +949,7 @@ const LandingPage = () => {
       {showBackToTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-[#d4a574] hover:bg-[#c8965f] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#d4a574] focus:ring-offset-2 z-40"
+          className="fixed bottom-8 right-8 bg-[#1a4d2e] hover:bg-[#2d5016] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2 z-40"
           aria-label="Scroll to top"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -959,13 +959,13 @@ const LandingPage = () => {
       )}
 
       {/* Footer */}
-      <footer id="contact" className="bg-[#3a3a3a] text-white py-12 sm:py-16 scroll-offset">
+      <footer id="contact" className="bg-[#1a4d2e] text-white py-12 sm:py-16 scroll-offset">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
             <div>
               <h3 className="text-2xl font-bold mb-4">
-                <span className="text-[#d4a574]">Honey</span>
+                <span className="text-[#1a4d2e]">Honey</span>
                 <span>ByJasmine</span>
               </h3>
               <p className="text-gray-400 text-sm">
@@ -981,7 +981,7 @@ const LandingPage = () => {
                   <a 
                     href="#weekly-menu" 
                     onClick={(e) => handleAnchorClick(e, 'weekly-menu')}
-                    className="hover:text-[#d4a574] transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded"
+                    className="hover:text-[#1a4d2e] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded"
                   >
                     Weekly Menu
                   </a>
@@ -990,7 +990,7 @@ const LandingPage = () => {
                   <a 
                     href="#meal-plans" 
                     onClick={(e) => handleAnchorClick(e, 'meal-plans')}
-                    className="hover:text-[#d4a574] transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded"
+                    className="hover:text-[#1a4d2e] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded"
                   >
                     Meal Plans
                   </a>
@@ -999,7 +999,7 @@ const LandingPage = () => {
                   <a 
                     href="#how-it-works" 
                     onClick={(e) => handleAnchorClick(e, 'how-it-works')}
-                    className="hover:text-[#d4a574] transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded"
+                    className="hover:text-[#1a4d2e] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded"
                   >
                     How It Works
                   </a>
@@ -1008,7 +1008,7 @@ const LandingPage = () => {
                   <a 
                     href="#about" 
                     onClick={(e) => handleAnchorClick(e, 'about')}
-                    className="hover:text-[#d4a574] transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded"
+                    className="hover:text-[#1a4d2e] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded"
                   >
                     About Jasmine
                   </a>
@@ -1034,7 +1034,7 @@ const LandingPage = () => {
                     href="https://instagram.com/honeybyjasmine" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-[#d4a574] transition-colors flex items-center focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded"
+                    className="hover:text-[#1a4d2e] transition-colors flex items-center focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded"
                     aria-label="Follow on Instagram"
                   >
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -1048,7 +1048,7 @@ const LandingPage = () => {
                     href="https://tiktok.com/@honeybyjasmine" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-[#d4a574] transition-colors flex items-center focus:outline-none focus:ring-2 focus:ring-[#d4a574] rounded"
+                    className="hover:text-[#1a4d2e] transition-colors flex items-center focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded"
                     aria-label="Follow on TikTok"
                   >
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
