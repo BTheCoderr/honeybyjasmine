@@ -24,7 +24,7 @@ const meals = [
     protein: 42,
     tags: ['High-Protein'],
     allergens: ['Dairy'],
-    image: '/images/meals/Grilled ribeye over a Caesar salad with homemade croutons.png'
+    image: '/images/meals/mediterraneanChoppedSteakSalad.jpeg'
   },
   {
     id: 3,
