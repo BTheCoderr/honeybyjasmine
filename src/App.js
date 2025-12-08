@@ -52,12 +52,12 @@ const OrderPage = () => {
               onClick={() => navigate('/')}
               className="text-2xl sm:text-3xl font-bold hover:opacity-80 transition-opacity"
             >
-              <span className="text-[#d4a574]">Honey</span>
-              <span className="text-[#8b6f47]">ByJasmine</span>
+              <span className="text-[#1a4d2e]">Honey</span>
+              <span className="text-[#1a4d2e] font-serif italic">ByJasmine</span>
             </button>
             <button
               onClick={() => navigate('/')}
-              className="text-[#3a3a3a] hover:text-[#d4a574] transition-colors font-medium"
+              className="text-[#1a4d2e] hover:text-[#2d5016] transition-colors font-medium"
             >
               ← Back to Home
             </button>
@@ -68,7 +68,7 @@ const OrderPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            <h1 className="text-4xl font-bold text-[#3a3a3a] mb-8">Order Your Meals</h1>
+            <h1 className="text-4xl font-bold text-[#1a4d2e] mb-8">Order Your Meals</h1>
             <Menu personalization={personalization} addToCart={addToCart} />
           </div>
           <div className="lg:col-span-1">
