@@ -506,11 +506,11 @@ const LandingPage = () => {
             <MealImage 
               src="/images/meals/Pan-seared salmon over farro with a butternut squash.png" 
               alt="Pan-seared salmon over farro with butternut squash"
-              mealName="Honey Glazed Salmon Bowl"
+              mealName="Pan-seared Salmon over Farro"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Honey Glazed Salmon Bowl</h3>
+            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Pan-seared Salmon over Farro</h3>
             <p className="text-[#5a5a5a] mb-3 text-sm">
-              Wild-caught salmon with quinoa, roasted vegetables, and a drizzle of honey glaze.
+              Pan-seared salmon served over farro with a butternut squash. A hearty, nutritious meal that's both satisfying and delicious.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
@@ -544,11 +544,11 @@ const LandingPage = () => {
             <MealImage 
               src="/images/meals/Levantine Chickpea & Pomegranate Fattoush.png" 
               alt="Levantine Chickpea & Pomegranate Fattoush"
-              mealName="Veggie Power Bowl"
+              mealName="Levantine Chickpea & Pomegranate Fattoush"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Veggie Power Bowl</h3>
+            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Levantine Chickpea & Pomegranate Fattoush</h3>
             <p className="text-[#5a5a5a] mb-3 text-sm">
-              Roasted sweet potatoes, black beans, avocado, and a tangy lime vinaigrette over brown rice.
+              A vibrant Middle Eastern salad with chickpeas, fresh pomegranate seeds, herbs, and crispy bread. Fresh, flavorful, and plant-based.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
@@ -563,11 +563,11 @@ const LandingPage = () => {
             <MealImage 
               src="/images/meals/Chicken Bacon Alfredo.png" 
               alt="Chicken Bacon Alfredo"
-              mealName="Turkey Meatball Marinara"
+              mealName="Chicken Bacon Alfredo"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Turkey Meatball Marinara</h3>
+            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Chicken Bacon Alfredo</h3>
             <p className="text-[#5a5a5a] mb-3 text-sm">
-              Lean turkey meatballs in a rich marinara sauce served over zucchini noodles.
+              Creamy alfredo pasta with tender chicken and crispy bacon. A comforting, indulgent meal that hits all the right notes.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
@@ -582,11 +582,11 @@ const LandingPage = () => {
             <MealImage 
               src="/images/meals/Herb-Crusted Salmon with Garlic Spinach Cream.jpeg" 
               alt="Herb-Crusted Salmon with Garlic Spinach Cream"
-              mealName="Thai Curry with Jasmine Rice"
+              mealName="Herb-Crusted Salmon with Garlic Spinach Cream"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Thai Curry with Jasmine Rice</h3>
+            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Herb-Crusted Salmon with Garlic Spinach Cream</h3>
             <p className="text-[#5a5a5a] mb-3 text-sm">
-              Creamy coconut curry with vegetables and your choice of protein, served over fragrant jasmine rice.
+              Perfectly seared salmon with a crispy herb crust, served over creamy garlic spinach. Elegant and full of flavor.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
@@ -601,11 +601,11 @@ const LandingPage = () => {
             <MealImage 
               src="/images/meals/Grilled ribeye over a Caesar salad with homemade croutons.png" 
               alt="Grilled ribeye over a Caesar salad with homemade croutons"
-              mealName="BBQ Pulled Chicken Bowl"
+              mealName="Grilled Ribeye over Caesar Salad"
             />
-            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">BBQ Pulled Chicken Bowl</h3>
+            <h3 className="text-xl font-bold text-[#3a3a3a] mb-2">Grilled Ribeye over Caesar Salad</h3>
             <p className="text-[#5a5a5a] mb-3 text-sm">
-              Tender pulled chicken with homemade BBQ sauce, corn, black beans, and a side of slaw.
+              Tender grilled ribeye steak served over a classic Caesar salad with homemade croutons. A protein-packed, satisfying meal.
             </p>
             <div className="flex items-center justify-between">
               <span className="bg-[#e8f5e9] text-[#4a7c59] px-3 py-1 rounded-full text-xs font-semibold">
