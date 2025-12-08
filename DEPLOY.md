@@ -33,9 +33,9 @@ In Netlify dashboard:
 2. Add these variables:
 
 ```
-RESEND_API_KEY=re_jDxs9BWe_3PhmuvtNuWDeqMn7BuXCKiAV
-RESEND_FROM_EMAIL=HoneyByJasmine <onboarding@resend.dev>
-RESEND_NOTIFICATION_EMAIL=bferrell514@gmail.com
+RESEND_API_KEY=re_your_api_key_here
+RESEND_FROM_EMAIL=HoneyByJasmine <your-email@yourdomain.com>
+RESEND_NOTIFICATION_EMAIL=your-notification-email@yourdomain.com
 ```
 
 ### 4. Deploy!
