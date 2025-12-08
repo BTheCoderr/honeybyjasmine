@@ -72,11 +72,20 @@ app.post('/api/subscribe', async (req, res) => {
       `,
     });
 
-    // Send notification email to Jasmine (optional)
+    // Send notification emails to you and Jasmine
+    const notificationEmails = [];
     if (process.env.RESEND_NOTIFICATION_EMAIL) {
+      notificationEmails.push(process.env.RESEND_NOTIFICATION_EMAIL);
+    }
+    if (process.env.RESEND_JASMINE_EMAIL) {
+      notificationEmails.push(process.env.RESEND_JASMINE_EMAIL);
+    }
+
+    // Send notification to all recipients
+    if (notificationEmails.length > 0) {
       await resend.emails.send({
         from: process.env.RESEND_FROM_EMAIL || 'HoneyByJasmine <onboarding@resend.dev>',
-        to: process.env.RESEND_NOTIFICATION_EMAIL,
+        to: notificationEmails,
         subject: `New Honey List Subscriber: ${firstName}`,
         html: `
           <p><strong>New subscriber:</strong></p>
