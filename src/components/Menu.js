@@ -70,7 +70,10 @@ const Menu = ({ personalization, addToCart }) => {
       regular: 1,
       large: 1.25
     };
-    return (basePrice * multipliers[personalization.portionSize]).toFixed(2);
+    // Normalize portionSize to lowercase to match multipliers keys
+    const portionSize = personalization.portionSize.toLowerCase();
+    const multiplier = multipliers[portionSize] || 1; // Default to 1 if not found
+    return (basePrice * multiplier).toFixed(2);
   };
 
   return (

@@ -31,7 +31,7 @@ const MealCard = ({ meal, price, portionSize, addToCart }) => {
       <div className="meal-content">
         <div className="meal-header">
           <h3>{meal.name}</h3>
-          <div className="meal-price">${price}</div>
+          <div className="meal-price">${price || '12.00'}</div>
         </div>
         <p className="meal-description">{meal.description}</p>
         
