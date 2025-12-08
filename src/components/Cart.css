@@ -115,7 +115,7 @@
 .quantity-btn {
   background: none;
   border: none;
-  color: #667eea;
+  color: #1a4d2e;
   font-size: 1.2rem;
   cursor: pointer;
   width: 28px;
@@ -128,7 +128,7 @@
 }
 
 .quantity-btn:hover {
-  background: #f0f4ff;
+  background: #e8f5e9;
 }
 
 .quantity {
@@ -139,7 +139,7 @@
 }
 
 .cart-item-price {
-  color: #667eea;
+  color: #1a4d2e;
   font-weight: bold;
   font-size: 1.1rem;
 }
@@ -161,7 +161,7 @@
 .summary-row.total {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #333;
+  color: #1a4d2e;
   margin-top: 0.5rem;
   padding-top: 0.75rem;
   border-top: 2px solid #e0e0e0;
@@ -189,7 +189,7 @@
 }
 
 .checkout-btn {
-  background: #667eea;
+  background: #1a4d2e;
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -202,9 +202,9 @@
 }
 
 .checkout-btn:hover {
-  background: #5568d3;
+  background: #2d5016;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(26, 77, 46, 0.4);
 }
 
 .checkout-btn:active {

@@ -6,7 +6,7 @@
 }
 
 .personalization-card h2 {
-  color: #667eea;
+  color: #1a4d2e;
   margin-bottom: 1.5rem;
   font-size: 1.75rem;
 }
@@ -45,15 +45,15 @@
 }
 
 .option-btn:hover {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: #1a4d2e;
+  color: #1a4d2e;
   transform: translateY(-2px);
 }
 
 .option-btn.active {
-  background: #667eea;
+  background: #1a4d2e;
   color: white;
-  border-color: #667eea;
+  border-color: #1a4d2e;
 }
 
 .option-btn.allergy.active {
@@ -79,22 +79,22 @@
 }
 
 .radio-label:hover {
-  border-color: #667eea;
+  border-color: #1a4d2e;
 }
 
 .radio-label input[type="radio"] {
   cursor: pointer;
-  accent-color: #667eea;
+  accent-color: #1a4d2e;
 }
 
 .radio-label input[type="radio"]:checked + span {
-  color: #667eea;
+  color: #1a4d2e;
   font-weight: 600;
 }
 
 .radio-label:has(input:checked) {
-  border-color: #667eea;
-  background: #f0f4ff;
+  border-color: #1a4d2e;
+  background: #e8f5e9;
 }
 
 @media (max-width: 768px) {
