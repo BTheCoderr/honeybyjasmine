@@ -35,7 +35,6 @@ In Netlify dashboard:
 ```
 RESEND_API_KEY=re_your_api_key_here
 RESEND_FROM_EMAIL=HoneyByJasmine <bferrell514@gmail.com>
-RESEND_NOTIFICATION_EMAIL=bferrell514@gmail.com
 RESEND_JASMINE_EMAIL=jasmine81493@icloud.com
 ```
 
