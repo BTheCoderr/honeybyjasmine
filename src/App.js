@@ -53,18 +53,9 @@ const OrderPage = () => {
               className="hover:opacity-80 transition-opacity"
             >
               <img 
-                src="/images/hero/Feminine Logo Designs for Premium Honey Brand.svg" 
+                src="/images/hero/balanced-bite-hero.svg" 
                 alt="THE BALANCED BITE - honey by Jasmine"
                 className="h-12 sm:h-16 w-auto"
-                onError={(e) => {
-                  // Fallback to PNG if SVG fails
-                  if (e.target.src.includes('.svg')) {
-                    e.target.src = '/images/hero/Feminine Logo Designs for Premium Honey Brand.png';
-                  } else if (e.target.src.includes('.png')) {
-                    // Fallback to JPG if PNG fails
-                    e.target.src = '/images/hero/Feminine Logo Designs for Premium Honey Brand.jpg';
-                  }
-                }}
               />
             </button>
             <button
