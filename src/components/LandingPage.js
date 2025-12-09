@@ -38,8 +38,33 @@ const LandingPage = () => {
   const [emailForm, setEmailForm] = useState({
     firstName: '',
     email: '',
-    city: ''
+    city: '',
+    // Client intake questionnaire fields
+    preferredContact: 'text',
+    // Food Allergies
+    allergies: [],
+    allergySeverity: '',
+    crossContamination: false,
+    otherAllergies: '',
+    // Dietary Restrictions & Preferences
+    eatingStyle: 'no-specific-diet',
+    avoids: [],
+    // Food Dislikes & Preferences
+    foodDislikes: '',
+    texturePreference: '',
+    spiceLevel: 'trust-chef',
+    // Religious or Cultural
+    religiousDietary: 'no',
+    religiousNotes: '',
+    // Medical
+    medicalNeeds: '',
+    medicalIngredients: '',
+    // Substitutions
+    allowSubstitutions: true,
+    // Additional Notes
+    additionalNotes: ''
   });
+  const [showQuestionnaire, setShowQuestionnaire] = useState(false);
   const [formErrors, setFormErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -158,7 +183,28 @@ const LandingPage = () => {
 
       // Success
       setFormSubmitted(true);
-      setEmailForm({ firstName: '', email: '', city: '' });
+      setEmailForm({ 
+        firstName: '', 
+        email: '', 
+        city: '',
+        preferredContact: 'text',
+        allergies: [],
+        allergySeverity: '',
+        crossContamination: false,
+        otherAllergies: '',
+        eatingStyle: 'no-specific-diet',
+        avoids: [],
+        foodDislikes: '',
+        texturePreference: '',
+        spiceLevel: 'trust-chef',
+        religiousDietary: 'no',
+        religiousNotes: '',
+        medicalNeeds: '',
+        medicalIngredients: '',
+        allowSubstitutions: true,
+        additionalNotes: ''
+      });
+      setShowQuestionnaire(false);
       
       // Reset success message after 5 seconds
       setTimeout(() => {
@@ -175,11 +221,24 @@ const LandingPage = () => {
   };
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setEmailForm({
-      ...emailForm,
-      [name]: value
-    });
+    const { name, value, type, checked } = e.target;
+    if (type === 'checkbox') {
+      if (name === 'crossContamination' || name === 'allowSubstitutions') {
+        setEmailForm(prev => ({ ...prev, [name]: checked }));
+      } else {
+        // Handle allergy/avoid checkboxes
+        const field = name.startsWith('allergy_') ? 'allergies' : 'avoids';
+        const itemName = name.replace('allergy_', '').replace('avoid_', '');
+        setEmailForm(prev => ({
+          ...prev,
+          [field]: checked
+            ? [...prev[field], itemName]
+            : prev[field].filter(item => item !== itemName)
+        }));
+      }
+    } else {
+      setEmailForm(prev => ({ ...prev, [name]: value }));
+    }
     // Clear error when user starts typing
     if (formErrors[name]) {
       setFormErrors({
@@ -784,6 +843,294 @@ const LandingPage = () => {
                   className="w-full px-5 py-4 rounded-lg border border-gray-200 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent transition-colors"
                 />
               </div>
+
+              {/* Optional: Tell us about your preferences */}
+              <div className="pt-4 border-t border-gray-200">
+                <button
+                  type="button"
+                  onClick={() => setShowQuestionnaire(!showQuestionnaire)}
+                  className="w-full text-left text-[#1a4d2e] hover:text-[#2d5016] font-medium mb-4 flex items-center justify-between"
+                >
+                  <span>Optional: Tell us about your dietary preferences and needs</span>
+                  <svg 
+                    className={`w-5 h-5 transition-transform ${showQuestionnaire ? 'rotate-180' : ''}`}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {showQuestionnaire && (
+                  <div className="space-y-6 pt-2">
+                    {/* Preferred Contact */}
+                    <div>
+                      <label className="block text-sm font-medium text-[#1a4d2e] mb-2">Preferred Contact Method</label>
+                      <div className="flex flex-wrap gap-4">
+                        {['text', 'email', 'phone'].map(method => (
+                          <label key={method} className="flex items-center gap-2 cursor-pointer">
+                            <input
+                              type="radio"
+                              name="preferredContact"
+                              value={method}
+                              checked={emailForm.preferredContact === method}
+                              onChange={handleInputChange}
+                              className="text-[#1a4d2e] focus:ring-[#1a4d2e]"
+                            />
+                            <span className="text-sm capitalize">{method === 'text' ? 'Text' : method === 'email' ? 'Email' : 'Phone Call'}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Food Allergies */}
+                    <div>
+                      <label className="block text-sm font-medium text-[#1a4d2e] mb-3">Food Allergies (select all that apply)</label>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        {['No known allergies', 'Dairy', 'Eggs', 'Gluten / Wheat', 'Soy', 'Peanuts', 'Tree nuts (almond, walnut, cashew, etc.)', 'Shellfish', 'Fish', 'Sesame'].map(allergy => (
+                          <label key={allergy} className="flex items-center gap-2 cursor-pointer text-sm">
+                            <input
+                              type="checkbox"
+                              name={`allergy_${allergy.toLowerCase().replace(/[^a-z0-9]+/g, '_')}`}
+                              checked={allergy === 'No known allergies' 
+                                ? emailForm.allergies.length === 0 || emailForm.allergies.includes('No known allergies')
+                                : emailForm.allergies.includes(allergy)}
+                              onChange={(e) => {
+                                if (allergy === 'No known allergies') {
+                                  setEmailForm(prev => ({ ...prev, allergies: e.target.checked ? ['No known allergies'] : [] }));
+                                } else {
+                                  handleInputChange(e);
+                                }
+                              }}
+                              className="text-[#1a4d2e] focus:ring-[#1a4d2e]"
+                            />
+                            <span>{allergy}</span>
+                          </label>
+                        ))}
+                      </div>
+                      {emailForm.allergies.length > 0 && !emailForm.allergies.includes('No known allergies') && (
+                        <div className="mt-4 space-y-4">
+                          <div>
+                            <input
+                              type="text"
+                              name="otherAllergies"
+                              value={emailForm.otherAllergies}
+                              onChange={handleInputChange}
+                              placeholder="Other allergies (please list)"
+                              className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent text-sm"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-sm font-medium text-[#1a4d2e] mb-2">How severe are your allergies?</label>
+                            <div className="flex flex-wrap gap-4">
+                              {['Mild', 'Moderate', 'Severe / Anaphylactic'].map(severity => (
+                                <label key={severity} className="flex items-center gap-2 cursor-pointer">
+                                  <input
+                                    type="radio"
+                                    name="allergySeverity"
+                                    value={severity.toLowerCase().replace(/[^a-z0-9]+/g, '_')}
+                                    checked={emailForm.allergySeverity === severity.toLowerCase().replace(/[^a-z0-9]+/g, '_')}
+                                    onChange={handleInputChange}
+                                    className="text-[#1a4d2e] focus:ring-[#1a4d2e]"
+                                  />
+                                  <span className="text-sm">{severity}</span>
+                                </label>
+                              ))}
+                            </div>
+                          </div>
+                          <label className="flex items-center gap-2 cursor-pointer">
+                            <input
+                              type="checkbox"
+                              name="crossContamination"
+                              checked={emailForm.crossContamination}
+                              onChange={handleInputChange}
+                              className="text-[#1a4d2e] focus:ring-[#1a4d2e]"
+                            />
+                            <span className="text-sm">Do you require strict cross-contamination precautions?</span>
+                          </label>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Dietary Restrictions */}
+                    <div>
+                      <label className="block text-sm font-medium text-[#1a4d2e] mb-2">Which best describes your eating style?</label>
+                      <select
+                        name="eatingStyle"
+                        value={emailForm.eatingStyle}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent text-sm"
+                      >
+                        <option value="no-specific-diet">No specific diet</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="pescatarian">Pescatarian</option>
+                        <option value="halal">Halal</option>
+                        <option value="kosher">Kosher (note: kitchen not certified kosher)</option>
+                        <option value="low-carb-keto">Low-carb / Keto</option>
+                        <option value="high-protein">High-protein</option>
+                        <option value="low-sodium">Low-sodium</option>
+                        <option value="anti-inflammatory">Anti-inflammatory</option>
+                        <option value="lactose-free">Lactose-free</option>
+                        <option value="gluten-free">Gluten-free</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-[#1a4d2e] mb-3">Do you avoid any of the following?</label>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        {['Beef', 'Pork', 'Chicken', 'Turkey', 'Fish', 'Shellfish', 'Eggs', 'Cheese', 'Caffeine'].map(item => (
+                          <label key={item} className="flex items-center gap-2 cursor-pointer text-sm">
+                            <input
+                              type="checkbox"
+                              name={`avoid_${item.toLowerCase()}`}
+                              checked={emailForm.avoids.includes(item)}
+                              onChange={handleInputChange}
+                              className="text-[#1a4d2e] focus:ring-[#1a4d2e]"
+                            />
+                            <span>{item}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Food Dislikes */}
+                    <div>
+                      <label className="block text-sm font-medium text-[#1a4d2e] mb-2">Are there foods you strongly dislike?</label>
+                      <textarea
+                        name="foodDislikes"
+                        value={emailForm.foodDislikes}
+                        onChange={handleInputChange}
+                        rows="2"
+                        placeholder="List any foods you dislike..."
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent text-sm"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-[#1a4d2e] mb-2">Texture preferences</label>
+                      <div className="flex flex-wrap gap-4">
+                        {['Prefer crispy', 'Prefer soft', 'Sensitive to mixed textures', 'No preferences'].map(texture => (
+                          <label key={texture} className="flex items-center gap-2 cursor-pointer">
+                            <input
+                              type="radio"
+                              name="texturePreference"
+                              value={texture.toLowerCase().replace(/[^a-z0-9]+/g, '_')}
+                              checked={emailForm.texturePreference === texture.toLowerCase().replace(/[^a-z0-9]+/g, '_')}
+                              onChange={handleInputChange}
+                              className="text-[#1a4d2e] focus:ring-[#1a4d2e]"
+                            />
+                            <span className="text-sm">{texture}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-[#1a4d2e] mb-2">Spice level</label>
+                      <div className="flex flex-wrap gap-4">
+                        {['Mild only', 'Medium', 'Spicy', 'I trust the chef'].map(level => (
+                          <label key={level} className="flex items-center gap-2 cursor-pointer">
+                            <input
+                              type="radio"
+                              name="spiceLevel"
+                              value={level.toLowerCase().replace(/[^a-z0-9]+/g, '_')}
+                              checked={emailForm.spiceLevel === level.toLowerCase().replace(/[^a-z0-9]+/g, '_')}
+                              onChange={handleInputChange}
+                              className="text-[#1a4d2e] focus:ring-[#1a4d2e]"
+                            />
+                            <span className="text-sm">{level}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Religious/Cultural */}
+                    <div>
+                      <label className="block text-sm font-medium text-[#1a4d2e] mb-2">Religious or cultural dietary rules?</label>
+                      <select
+                        name="religiousDietary"
+                        value={emailForm.religiousDietary}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent text-sm"
+                      >
+                        <option value="no">No</option>
+                        <option value="halal">Halal</option>
+                        <option value="kosher-style">Kosher-style</option>
+                        <option value="no-pork">No pork</option>
+                        <option value="no-beef">No beef</option>
+                        <option value="fasting-days">Fasting days / restrictions</option>
+                        <option value="other">Other</option>
+                      </select>
+                      {emailForm.religiousDietary !== 'no' && (
+                        <textarea
+                          name="religiousNotes"
+                          value={emailForm.religiousNotes}
+                          onChange={handleInputChange}
+                          rows="2"
+                          placeholder="Additional notes about religious or cultural dietary needs..."
+                          className="w-full mt-3 px-4 py-3 rounded-lg border border-gray-200 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent text-sm"
+                        />
+                      )}
+                    </div>
+
+                    {/* Medical */}
+                    <div>
+                      <label className="block text-sm font-medium text-[#1a4d2e] mb-2">Medical dietary needs?</label>
+                      <textarea
+                        name="medicalNeeds"
+                        value={emailForm.medicalNeeds}
+                        onChange={handleInputChange}
+                        rows="2"
+                        placeholder="Describe any medical dietary needs..."
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent text-sm"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-[#1a4d2e] mb-2">Ingredients to avoid for medical reasons?</label>
+                      <textarea
+                        name="medicalIngredients"
+                        value={emailForm.medicalIngredients}
+                        onChange={handleInputChange}
+                        rows="2"
+                        placeholder="List ingredients to avoid..."
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent text-sm"
+                      />
+                    </div>
+
+                    {/* Substitutions */}
+                    <div>
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          name="allowSubstitutions"
+                          checked={emailForm.allowSubstitutions}
+                          onChange={handleInputChange}
+                          className="text-[#1a4d2e] focus:ring-[#1a4d2e]"
+                        />
+                        <span className="text-sm">Are you open to chef-selected substitutions if an ingredient is unavailable?</span>
+                      </label>
+                    </div>
+
+                    {/* Additional Notes */}
+                    <div>
+                      <label className="block text-sm font-medium text-[#1a4d2e] mb-2">Anything else you'd like us to know?</label>
+                      <textarea
+                        name="additionalNotes"
+                        value={emailForm.additionalNotes}
+                        onChange={handleInputChange}
+                        rows="3"
+                        placeholder="Any additional information, preferences, or special requests..."
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent text-sm"
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {formErrors.submit && (
                 <div className="bg-red-50 border border-red-200 text-red-800 px-5 py-4 rounded-lg text-center" role="alert">
                   <p className="font-semibold">{formErrors.submit}</p>

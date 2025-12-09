@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Checkout.css';
 
-const Checkout = ({ selectedMeals, personalization, onOrderComplete }) => {
+const Checkout = ({ selectedMeals = [], personalization = {}, onOrderComplete }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -44,19 +44,20 @@ const Checkout = ({ selectedMeals, personalization, onOrderComplete }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const calculateSubtotal = () => {
+    if (!selectedMeals || selectedMeals.length === 0) return 0;
     return selectedMeals.reduce((sum, meal) => sum + (meal.price * meal.quantity), 0);
   };
 
   const calculateTotal = () => {
     const subtotal = calculateSubtotal();
     const tax = subtotal * 0.08;
-    const delivery = selectedMeals.length > 0 ? 5.99 : 0;
+    const delivery = (selectedMeals && selectedMeals.length > 0) ? 5.99 : 0;
     return subtotal + tax + delivery;
   };
 
   const subtotal = calculateSubtotal();
   const tax = subtotal * 0.08;
-  const delivery = selectedMeals.length > 0 ? 5.99 : 0;
+  const delivery = (selectedMeals && selectedMeals.length > 0) ? 5.99 : 0;
   const total = calculateTotal();
 
   const handleChange = (e) => {
@@ -122,7 +123,7 @@ const Checkout = ({ selectedMeals, personalization, onOrderComplete }) => {
       return;
     }
 
-    if (selectedMeals.length === 0) {
+    if (!selectedMeals || selectedMeals.length === 0) {
       alert('Your cart is empty. Please add meals before checkout.');
       navigate('/');
       return;
@@ -667,7 +668,7 @@ const Checkout = ({ selectedMeals, personalization, onOrderComplete }) => {
         <div className="checkout-summary">
           <h2>Order Summary</h2>
           <div className="summary-items">
-            {selectedMeals.map(meal => (
+            {(selectedMeals || []).map(meal => (
               <div key={meal.id} className="summary-item">
                 <div className="summary-item-info">
                   <span className="summary-item-image">{meal.image}</span>
@@ -687,7 +688,7 @@ const Checkout = ({ selectedMeals, personalization, onOrderComplete }) => {
 
           <div className="summary-totals">
             <div className="summary-row">
-              <span>Subtotal ({selectedMeals.reduce((sum, m) => sum + m.quantity, 0)} items)</span>
+              <span>Subtotal ({(selectedMeals || []).reduce((sum, m) => sum + m.quantity, 0)} items)</span>
               <span>${subtotal.toFixed(2)}</span>
             </div>
             <div className="summary-row">
@@ -705,12 +706,12 @@ const Checkout = ({ selectedMeals, personalization, onOrderComplete }) => {
           </div>
 
           <div className="order-notes-summary">
-            <p><strong>Meal Plan:</strong> {personalization.mealPlan}</p>
-            <p><strong>Portion Size:</strong> {personalization.portionSize}</p>
-            {personalization.dietaryPreferences.length > 0 && (
+            <p><strong>Meal Plan:</strong> {personalization?.mealPlan || 'N/A'}</p>
+            <p><strong>Portion Size:</strong> {personalization?.portionSize || 'N/A'}</p>
+            {personalization?.dietaryPreferences && personalization.dietaryPreferences.length > 0 && (
               <p><strong>Preferences:</strong> {personalization.dietaryPreferences.join(', ')}</p>
             )}
-            {personalization.allergies.length > 0 && (
+            {personalization?.allergies && personalization.allergies.length > 0 && (
               <p><strong>Allergies Avoided:</strong> {personalization.allergies.join(', ')}</p>
             )}
           </div>
