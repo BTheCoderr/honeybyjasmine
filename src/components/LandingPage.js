@@ -774,7 +774,7 @@ const LandingPage = () => {
       </section>
 
       {/* Email Signup Section */}
-      <section className="bg-gradient-to-br from-[#faf8f5] to-[#f5f0e8] py-20 sm:py-28">
+      <section id="email-signup" className="bg-gradient-to-br from-[#faf8f5] to-[#f5f0e8] py-20 sm:py-28 scroll-offset">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-3xl p-10 sm:p-14 md:p-16 shadow-lg border border-[#e8e0d5]">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#1a4d2e] mb-6 text-center">

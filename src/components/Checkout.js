@@ -715,6 +715,20 @@ const Checkout = ({ selectedMeals = [], personalization = {}, onOrderComplete })
               <p><strong>Allergies Avoided:</strong> {personalization.allergies.join(', ')}</p>
             )}
           </div>
+
+          {/* Join The Honey List CTA */}
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <p className="text-sm text-gray-600 mb-3 text-center">
+              Want first access to weekly menus and special offers?
+            </p>
+            <button
+              type="button"
+              onClick={() => navigate('/#email-signup')}
+              className="w-full bg-[#1a4d2e] hover:bg-[#2d5016] text-white px-4 py-3 rounded-lg font-medium transition-colors text-sm"
+            >
+              Join The Honey List
+            </button>
+          </div>
         </div>
       </div>
     </div>
