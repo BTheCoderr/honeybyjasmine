@@ -198,15 +198,9 @@ const LandingPage = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <img 
-                src="/images/hero/honeybyjas.png" 
+                src="/balanced-bite-logo.svg" 
                 alt="THE BALANCED BITE - honey by Jasmine"
                 className="h-12 sm:h-16 w-auto"
-                onError={(e) => {
-                  // Fallback to JPG if PNG fails
-                  if (e.target.src.includes('.png')) {
-                    e.target.src = '/images/hero/honeybyjas.jpg';
-                  }
-                }}
               />
             </div>
 
