@@ -198,9 +198,15 @@ const LandingPage = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <img 
-                src="/balanced-bite-logo.svg" 
+                src="/images/hero/honeybyjas.png" 
                 alt="THE BALANCED BITE - honey by Jasmine"
                 className="h-12 sm:h-16 w-auto"
+                onError={(e) => {
+                  // Fallback to JPG if PNG fails
+                  if (e.target.src.includes('.png')) {
+                    e.target.src = '/images/hero/honeybyjas.jpg';
+                  }
+                }}
               />
             </div>
 
@@ -360,16 +366,13 @@ const LandingPage = () => {
             <div className="hidden lg:flex justify-center lg:justify-end">
               <div className="bg-white rounded-3xl shadow-lg border border-gray-200 p-8 md:p-10 flex items-center justify-center w-full max-w-md">
                 <img
-                  src="/images/hero/Feminine Logo Designs for Premium Honey Brand.svg"
+                  src="/images/hero/honeybyjas.png"
                   alt="THE BALANCED BITE - honey by Jasmine"
                   className="w-full h-auto"
                   onError={(e) => {
-                    // Fallback to PNG if SVG fails
-                    if (e.target.src.includes('.svg')) {
-                      e.target.src = '/images/hero/Feminine Logo Designs for Premium Honey Brand.png';
-                    } else if (e.target.src.includes('.png')) {
-                      // Fallback to JPG if PNG fails
-                      e.target.src = '/images/hero/Feminine Logo Designs for Premium Honey Brand.jpg';
+                    // Fallback to JPG if PNG fails
+                    if (e.target.src.includes('.png')) {
+                      e.target.src = '/images/hero/honeybyjas.jpg';
                     }
                   }}
                 />
