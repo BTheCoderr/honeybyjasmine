@@ -78,6 +78,24 @@ const LandingPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Handle hash navigation to email signup section
+  useEffect(() => {
+    if (window.location.hash === '#email-signup') {
+      setTimeout(() => {
+        const element = document.getElementById('email-signup');
+        if (element) {
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  }, []);
+
   // Scroll animations using Intersection Observer
   useEffect(() => {
     const observerOptions = {
