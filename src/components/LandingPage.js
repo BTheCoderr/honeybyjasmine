@@ -1334,13 +1334,12 @@ const LandingPage = () => {
               <h4 className="font-semibold mb-4">Navigation</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <a 
-                    href="#weekly-menu" 
-                    onClick={(e) => handleAnchorClick(e, 'weekly-menu')}
-                    className="hover:text-[#1a4d2e] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded"
+                  <button 
+                    onClick={() => navigate('/order')}
+                    className="hover:text-[#1a4d2e] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded bg-transparent border-none cursor-pointer text-left text-gray-400"
                   >
                     Weekly Menu
-                  </a>
+                  </button>
                 </li>
                 <li>
                   <a 
