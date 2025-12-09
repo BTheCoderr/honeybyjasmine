@@ -283,14 +283,13 @@ const LandingPage = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a 
-                href="#weekly-menu" 
-                onClick={(e) => handleAnchorClick(e, 'weekly-menu')}
-                className="text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2 rounded"
-                aria-label="Navigate to Weekly Menu section"
+              <button 
+                onClick={() => navigate('/order')}
+                className="text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2 rounded bg-transparent border-none cursor-pointer"
+                aria-label="Navigate to Weekly Menu order page"
               >
                 Weekly Menu
-              </a>
+              </button>
               <a 
                 href="#meal-plans" 
                 onClick={(e) => handleAnchorClick(e, 'meal-plans')}
@@ -351,14 +350,13 @@ const LandingPage = () => {
           {/* Mobile Menu */}
           {mobileMenuOpen && (
             <div className="md:hidden py-4 space-y-4 border-t border-[#e8e0d5]">
-              <a 
-                href="#weekly-menu" 
-                onClick={(e) => handleAnchorClick(e, 'weekly-menu')}
-                className="block text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded px-2 py-1"
-                aria-label="Navigate to Weekly Menu section"
-              >
-                Weekly Menu
-              </a>
+                <button 
+                  onClick={() => navigate('/order')}
+                  className="block text-[#1a4d2e] hover:text-[#1a4d2e] transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] rounded px-2 py-1 bg-transparent border-none cursor-pointer w-full text-left"
+                  aria-label="Navigate to Weekly Menu order page"
+                >
+                  Weekly Menu
+                </button>
               <a 
                 href="#meal-plans" 
                 onClick={(e) => handleAnchorClick(e, 'meal-plans')}
@@ -562,14 +560,22 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Featured Weekly Menu Preview */}
-      <section id="weekly-menu" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 scroll-offset">
+      {/* Menu Portfolio - Past Favorites */}
+      <section id="menu-portfolio" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 scroll-offset">
         <h2 className="text-3xl sm:text-4xl font-bold text-[#1a4d2e] mb-4 text-center">
-          This Week's Honey Menu
+          Menu Portfolio
         </h2>
-        <p className="text-center text-[#1a4d2e] mb-12 max-w-2xl mx-auto">
-          Fresh flavors rotate every week, and spots fill up fast. Order by Wednesday for this week's delivery.
+        <p className="text-center text-[#1a4d2e] mb-4 max-w-2xl mx-auto">
+          A taste of what's possible. Every week features a rotating selection of fresh, balanced meals.
         </p>
+        <div className="text-center mb-12">
+          <button
+            onClick={() => navigate('/order')}
+            className="bg-[#1a4d2e] hover:bg-[#2d5016] text-white px-8 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2"
+          >
+            View This Week's Menu →
+          </button>
+        </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {/* Meal 1 */}
           <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all">
@@ -779,15 +785,6 @@ const LandingPage = () => {
               <span className="text-sm text-[#2d5016]">~320 cal</span>
             </div>
           </div>
-        </div>
-        <div className="text-center">
-          <button 
-            onClick={() => navigate('/order')}
-            className="bg-[#1a4d2e] hover:bg-[#2d5016] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2"
-            aria-label="View full menu and place order"
-          >
-            View Full Menu and Order
-          </button>
         </div>
       </section>
 
