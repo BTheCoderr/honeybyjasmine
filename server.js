@@ -34,7 +34,7 @@ app.post('/api/subscribe', async (req, res) => {
     const welcomeEmail = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || 'HoneyByJasmine <onboarding@resend.dev>',
       to: email,
-      subject: 'Welcome to The Honey List! 🍯',
+      subject: 'Welcome to The Hive! 🍯',
       html: `
         <!DOCTYPE html>
         <html>
@@ -51,11 +51,11 @@ app.post('/api/subscribe', async (req, res) => {
           <body>
             <div class="container">
               <div class="header">
-                <h1>Welcome to The Honey List! 🍯</h1>
+                <h1>Welcome to The Hive! 🍯</h1>
               </div>
               <div class="content">
                 <p>Hi ${firstName}!</p>
-                <p>Thanks for joining The Honey List! I'm so excited to have you here.</p>
+                <p>Thanks for joining The Hive! I'm so excited to have you here.</p>
                 <p>You'll now be the first to know about:</p>
                 <ul>
                   <li>✨ Weekly menu releases (every Wednesday)</li>
@@ -77,7 +77,7 @@ app.post('/api/subscribe', async (req, res) => {
       await resend.emails.send({
         from: process.env.RESEND_FROM_EMAIL || 'HoneyByJasmine <onboarding@resend.dev>',
         to: process.env.RESEND_JASMINE_EMAIL,
-        subject: `New Honey List Subscriber: ${firstName}`,
+        subject: `New Hive Member: ${firstName}`,
         html: `
           <p><strong>New subscriber:</strong></p>
           <ul>
@@ -91,7 +91,7 @@ app.post('/api/subscribe', async (req, res) => {
 
     res.json({ 
       success: true, 
-      message: 'Successfully subscribed to The Honey List!',
+      message: 'Successfully subscribed to The Hive!',
       emailId: welcomeEmail.id 
     });
   } catch (error) {

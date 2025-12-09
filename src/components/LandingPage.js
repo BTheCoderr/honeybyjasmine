@@ -793,7 +793,7 @@ const LandingPage = () => {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-3xl p-10 sm:p-14 md:p-16 shadow-lg border border-[#e8e0d5]">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#1a4d2e] mb-6 text-center">
-              Join The Honey List
+              Join The Hive
             </h2>
             <p className="text-center text-[#1a4d2e] mb-12 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
               Subscribers get first access to the weekly menu, sold-out alerts, and occasional tips from me. No spam, just the good stuff.
@@ -1153,7 +1153,7 @@ const LandingPage = () => {
               )}
               {formSubmitted && (
                 <div className="bg-green-50 border border-green-200 text-green-800 px-5 py-4 rounded-lg text-center" role="alert">
-                  <p className="font-semibold">Thanks for joining The Honey List! 🍯</p>
+                  <p className="font-semibold">Thanks for joining The Hive! 🍯</p>
                   <p className="text-sm mt-2">Check your email for confirmation.</p>
                 </div>
               )}
