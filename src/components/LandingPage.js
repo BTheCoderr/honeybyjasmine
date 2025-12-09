@@ -964,16 +964,13 @@ const LandingPage = () => {
             {/* Brand */}
             <div>
               <img 
-                src="/images/hero/Feminine Logo Designs for Premium Honey Brand.svg" 
+                src="/images/hero/honeybyjas.png" 
                 alt="THE BALANCED BITE - honey by Jasmine"
                 className="h-12 sm:h-16 w-auto mb-4 brightness-0 invert"
                 onError={(e) => {
-                  // Fallback to PNG if SVG fails
-                  if (e.target.src.includes('.svg')) {
-                    e.target.src = '/images/hero/Feminine Logo Designs for Premium Honey Brand.png';
-                  } else if (e.target.src.includes('.png')) {
-                    // Fallback to JPG if PNG fails
-                    e.target.src = '/images/hero/Feminine Logo Designs for Premium Honey Brand.jpg';
+                  // Fallback to JPG if PNG fails
+                  if (e.target.src.includes('.png')) {
+                    e.target.src = '/images/hero/honeybyjas.jpg';
                   }
                 }}
               />
