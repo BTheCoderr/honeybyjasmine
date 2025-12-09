@@ -99,6 +99,61 @@
   min-height: 80px;
 }
 
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input[type="checkbox"],
+.form-group input[type="radio"] {
+  width: auto;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.form-group .grid {
+  display: grid;
+}
+
+.form-group .grid.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form-group .grid.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 640px) {
+  .form-group .grid.grid-cols-2,
+  .form-group .grid.grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group .flex {
+  display: flex;
+}
+
+.form-group .flex.gap-2 {
+  gap: 0.5rem;
+}
+
+.form-group .flex.gap-3 {
+  gap: 0.75rem;
+}
+
+.form-group .flex.gap-4 {
+  gap: 1rem;
+}
+
+.form-group .mt-2 {
+  margin-top: 0.5rem;
+}
+
+.form-group .mt-4 {
+  margin-top: 1rem;
+}
+
 .form-actions {
   display: flex;
   gap: 1rem;
