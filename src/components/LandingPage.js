@@ -958,15 +958,9 @@ const LandingPage = () => {
             {/* Brand */}
             <div>
               <img 
-                src="/images/hero/honeybyjas.png" 
+                src="/balanced-bite-logo-white.svg" 
                 alt="THE BALANCED BITE - honey by Jasmine"
-                className="h-12 sm:h-16 w-auto mb-4 brightness-0 invert"
-                onError={(e) => {
-                  // Fallback to JPG if PNG fails
-                  if (e.target.src.includes('.png')) {
-                    e.target.src = '/images/hero/honeybyjas.jpg';
-                  }
-                }}
+                className="h-12 sm:h-16 w-auto mb-4"
               />
               <p className="text-gray-400 text-sm">
                 Fresh, balanced meals that make eating well feel easy.
@@ -1021,7 +1015,7 @@ const LandingPage = () => {
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>hello@honeybyjasmine.com</li>
-                <li>(555) 123-4567</li>
+                <li>(774) 922-2322</li>
               </ul>
             </div>
 

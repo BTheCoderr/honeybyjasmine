@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" fill="none">
+  <!-- Heart -->
+  <path d="M150 60
+           C140 45, 115 45, 115 70
+           C115 90, 140 110, 150 120
+           C160 110, 185 90, 185 70
+           C185 45, 160 45, 150 60Z"
+        stroke="#FFFFFF" stroke-width="10" fill="none" />
+  
+  <!-- Honey Dipper Handle -->
+  <rect x="140" y="120" width="20" height="80" rx="6" fill="#FFFFFF"/>
+  
+  <!-- Honey Dipper Head -->
+  <ellipse cx="150" cy="200" rx="25" ry="15" fill="#FFFFFF"/>
+  
+  <!-- Bowl Outline -->
+  <path d="M80 210
+           Q150 260 220 210
+           L220 235
+           Q150 285 80 235Z"
+        stroke="#FFFFFF" stroke-width="12" fill="none"/>
+</svg>
+
