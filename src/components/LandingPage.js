@@ -198,7 +198,7 @@ const LandingPage = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <img 
-                src="/images/hero/balanced-bite-hero.svg" 
+                src="/balanced-bite-logo.svg" 
                 alt="THE BALANCED BITE - honey by Jasmine"
                 className="h-12 sm:h-16 w-auto"
               />
@@ -360,9 +360,18 @@ const LandingPage = () => {
             <div className="hidden lg:flex justify-center lg:justify-end">
               <div className="bg-white rounded-3xl shadow-lg border border-gray-200 p-8 md:p-10 flex items-center justify-center w-full max-w-md">
                 <img
-                  src="/images/hero/balanced-bite-hero.svg"
+                  src="/images/hero/Feminine Logo Designs for Premium Honey Brand.svg"
                   alt="THE BALANCED BITE - honey by Jasmine"
                   className="w-full h-auto"
+                  onError={(e) => {
+                    // Fallback to PNG if SVG fails
+                    if (e.target.src.includes('.svg')) {
+                      e.target.src = '/images/hero/Feminine Logo Designs for Premium Honey Brand.png';
+                    } else if (e.target.src.includes('.png')) {
+                      // Fallback to JPG if PNG fails
+                      e.target.src = '/images/hero/Feminine Logo Designs for Premium Honey Brand.jpg';
+                    }
+                  }}
                 />
               </div>
             </div>
@@ -952,9 +961,18 @@ const LandingPage = () => {
             {/* Brand */}
             <div>
               <img 
-                src="/images/hero/balanced-bite-hero.svg" 
+                src="/images/hero/Feminine Logo Designs for Premium Honey Brand.svg" 
                 alt="THE BALANCED BITE - honey by Jasmine"
                 className="h-12 sm:h-16 w-auto mb-4 brightness-0 invert"
+                onError={(e) => {
+                  // Fallback to PNG if SVG fails
+                  if (e.target.src.includes('.svg')) {
+                    e.target.src = '/images/hero/Feminine Logo Designs for Premium Honey Brand.png';
+                  } else if (e.target.src.includes('.png')) {
+                    // Fallback to JPG if PNG fails
+                    e.target.src = '/images/hero/Feminine Logo Designs for Premium Honey Brand.jpg';
+                  }
+                }}
               />
               <p className="text-gray-400 text-sm">
                 Fresh, balanced meals that make eating well feel easy.
