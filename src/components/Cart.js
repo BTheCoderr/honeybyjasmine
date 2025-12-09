@@ -32,10 +32,31 @@ const Cart = ({ selectedMeals, removeFromCart, updateQuantity, personalization }
       ) : (
         <>
           <div className="cart-items">
-            {selectedMeals.map(meal => (
+            {selectedMeals.map(meal => {
+              // Encode image path to handle spaces and special characters
+              const encodedImageSrc = meal.image.split('/').map((part, index) => 
+                index === meal.image.split('/').length - 1 ? encodeURIComponent(part) : part
+              ).join('/');
+
+              return (
               <div key={meal.id} className="cart-item">
                 <div className="cart-item-header">
-                  <span className="cart-item-image">{meal.image}</span>
+                  <div className="cart-item-image">
+                    <img 
+                      src={encodedImageSrc} 
+                      alt={meal.name}
+                      onError={(e) => {
+                        // Fallback to a placeholder if image fails
+                        e.target.style.display = 'none';
+                        if (!e.target.parentElement.querySelector('.placeholder')) {
+                          const placeholder = document.createElement('div');
+                          placeholder.className = 'placeholder';
+                          placeholder.textContent = meal.name.charAt(0).toUpperCase();
+                          e.target.parentElement.appendChild(placeholder);
+                        }
+                      }}
+                    />
+                  </div>
                   <div className="cart-item-info">
                     <h4>{meal.name}</h4>
                     <p className="cart-item-portion">{meal.portionSize} portion</p>
@@ -69,7 +90,8 @@ const Cart = ({ selectedMeals, removeFromCart, updateQuantity, personalization }
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="cart-summary">
