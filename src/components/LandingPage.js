@@ -336,58 +336,53 @@ const LandingPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a4d2e] leading-tight mb-6">
-              I take the stress out of eating better.
-            </h2>
-            <p className="text-lg sm:text-xl text-[#2d5016] mb-8 leading-relaxed">
-              Skip the grocery store stress and the takeout guilt. I cook fresh, balanced meals that save you time and money—and actually taste like home. No complicated plans, no judgment, just real food that fits your life.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <button 
-                onClick={() => navigate('/order')}
-                className="bg-[#1a4d2e] hover:bg-[#2d5016] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2"
-                aria-label="Order this week's menu"
-              >
-                Order This Week's Menu
-              </button>
-              <button 
-                onClick={(e) => handleAnchorClick(e, 'how-it-works')}
-                className="bg-white hover:bg-[#f5f0e8] text-[#1a4d2e] border-2 border-[#1a4d2e] px-8 py-4 rounded-full font-semibold text-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2"
-                aria-label="Learn how it works"
-              >
-                See How It Works
-              </button>
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a4d2e] leading-tight mb-6">
+                I take the stress out of eating better.
+              </h2>
+              <p className="text-lg sm:text-xl text-[#2d5016] mb-8 leading-relaxed">
+                Skip the grocery store stress and the takeout guilt. I cook fresh, balanced meals that save you time and money—and actually taste like home. No complicated plans, no judgment, just real food that fits your life.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                <button 
+                  onClick={() => navigate('/order')}
+                  className="bg-[#1a4d2e] hover:bg-[#2d5016] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2"
+                  aria-label="Order this week's menu"
+                >
+                  Order This Week's Menu
+                </button>
+                <button 
+                  onClick={(e) => handleAnchorClick(e, 'how-it-works')}
+                  className="bg-white hover:bg-[#f5f0e8] text-[#1a4d2e] border-2 border-[#1a4d2e] px-8 py-4 rounded-full font-semibold text-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2"
+                  aria-label="Learn how it works"
+                >
+                  See How It Works
+                </button>
+              </div>
+              <p className="text-sm text-[#2d5016] italic">
+                Fresh, portion balanced meals, ready in minutes.
+              </p>
             </div>
-            <p className="text-sm text-[#2d5016] italic">
-              Fresh, portion balanced meals, ready in minutes.
-            </p>
-          </div>
-          <div className="hidden lg:block">
-            <div className="bg-gradient-to-br from-[#1a4d2e] to-[#2d5016] rounded-3xl aspect-square shadow-2xl overflow-hidden relative">
-              <img 
-                src="/images/hero/hero-main.jpg" 
-                alt="Fresh, healthy meal prep dishes from HoneyByJasmine"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  // Fallback to gradient placeholder if image doesn't exist
-                  e.target.style.display = 'none';
-                  e.target.parentElement.classList.add('flex', 'items-center', 'justify-center');
-                  if (!e.target.parentElement.querySelector('.placeholder')) {
-                    const placeholder = document.createElement('div');
-                    placeholder.className = 'placeholder text-white text-center p-8';
-                    placeholder.innerHTML = `
-                      <svg class="w-32 h-32 mx-auto mb-4 opacity-80" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 01.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
-                      </svg>
-                      <p class="text-xl font-semibold">Food Photo Placeholder</p>
-                    `;
-                    e.target.parentElement.appendChild(placeholder);
-                  }
-                }}
-              />
+            <div className="hidden lg:flex justify-center lg:justify-end">
+              <div className="bg-white rounded-3xl shadow-lg border border-gray-200 p-8 md:p-10 flex items-center justify-center w-full max-w-md">
+                <img
+                  src="/images/hero/Feminine Logo Designs for Premium Honey Brand.svg"
+                  alt="THE BALANCED BITE - honey by Jasmine"
+                  className="w-full h-auto"
+                  onError={(e) => {
+                    // Fallback to PNG if SVG fails
+                    if (e.target.src.includes('.svg')) {
+                      e.target.src = '/images/hero/Feminine Logo Designs for Premium Honey Brand.png';
+                    } else if (e.target.src.includes('.png')) {
+                      // Fallback to JPG if PNG fails
+                      e.target.src = '/images/hero/Feminine Logo Designs for Premium Honey Brand.jpg';
+                    }
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
