@@ -715,17 +715,17 @@ const LandingPage = () => {
       </section>
 
       {/* Email Signup Section */}
-      <section className="bg-gradient-to-br from-[#faf8f5] to-[#f5f0e8] py-16 sm:py-20">
+      <section className="bg-gradient-to-br from-[#faf8f5] to-[#f5f0e8] py-20 sm:py-28">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-lg border border-[#e8e0d5]">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a4d2e] mb-4 text-center">
+          <div className="bg-white rounded-3xl p-10 sm:p-14 md:p-16 shadow-lg border border-[#e8e0d5]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#1a4d2e] mb-6 text-center">
               Join The Honey List
             </h2>
-            <p className="text-center text-[#1a4d2e] mb-8 leading-relaxed">
+            <p className="text-center text-[#1a4d2e] mb-12 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
               Subscribers get first access to the weekly menu, sold-out alerts, and occasional tips from me. No spam, just the good stuff.
             </p>
-            <form onSubmit={handleEmailSubmit} className="space-y-4" noValidate>
-              <div className="grid sm:grid-cols-2 gap-4">
+            <form onSubmit={handleEmailSubmit} className="space-y-6" noValidate>
+              <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
                 <div>
                   <input
                     type="text"
@@ -737,14 +737,14 @@ const LandingPage = () => {
                     aria-label="First name"
                     aria-invalid={formErrors.firstName ? 'true' : 'false'}
                     aria-describedby={formErrors.firstName ? 'firstName-error' : undefined}
-                    className={`w-full px-4 py-3 rounded-lg border ${
+                    className={`w-full px-5 py-4 rounded-lg border text-gray-700 placeholder-gray-400 ${
                       formErrors.firstName 
                         ? 'border-red-400 focus:ring-red-400' 
-                        : 'border-[#e8e0d5] focus:ring-[#1a4d2e]'
+                        : 'border-gray-200 focus:ring-[#1a4d2e]'
                     } focus:outline-none focus:ring-2 focus:border-transparent transition-colors`}
                   />
                   {formErrors.firstName && (
-                    <p id="firstName-error" className="mt-1 text-sm text-red-600" role="alert">
+                    <p id="firstName-error" className="mt-2 text-sm text-red-600" role="alert">
                       {formErrors.firstName}
                     </p>
                   )}
@@ -760,14 +760,14 @@ const LandingPage = () => {
                     aria-label="Email address"
                     aria-invalid={formErrors.email ? 'true' : 'false'}
                     aria-describedby={formErrors.email ? 'email-error' : undefined}
-                    className={`w-full px-4 py-3 rounded-lg border ${
+                    className={`w-full px-5 py-4 rounded-lg border text-gray-700 placeholder-gray-400 ${
                       formErrors.email 
                         ? 'border-red-400 focus:ring-red-400' 
-                        : 'border-[#e8e0d5] focus:ring-[#1a4d2e]'
+                        : 'border-gray-200 focus:ring-[#1a4d2e]'
                     } focus:outline-none focus:ring-2 focus:border-transparent transition-colors`}
                   />
                   {formErrors.email && (
-                    <p id="email-error" className="mt-1 text-sm text-red-600" role="alert">
+                    <p id="email-error" className="mt-2 text-sm text-red-600" role="alert">
                       {formErrors.email}
                     </p>
                   )}
@@ -781,23 +781,23 @@ const LandingPage = () => {
                   onChange={handleInputChange}
                   placeholder="City or area (optional)"
                   aria-label="City or area (optional)"
-                  className="w-full px-4 py-3 rounded-lg border border-[#e8e0d5] focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent"
+                  className="w-full px-5 py-4 rounded-lg border border-gray-200 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:border-transparent transition-colors"
                 />
               </div>
               {formErrors.submit && (
-                <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg text-center" role="alert">
+                <div className="bg-red-50 border border-red-200 text-red-800 px-5 py-4 rounded-lg text-center" role="alert">
                   <p className="font-semibold">{formErrors.submit}</p>
                 </div>
               )}
               {formSubmitted && (
-                <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg text-center" role="alert">
+                <div className="bg-green-50 border border-green-200 text-green-800 px-5 py-4 rounded-lg text-center" role="alert">
                   <p className="font-semibold">Thanks for joining The Honey List! 🍯</p>
-                  <p className="text-sm mt-1">Check your email for confirmation.</p>
+                  <p className="text-sm mt-2">Check your email for confirmation.</p>
                 </div>
               )}
               <button
                 type="submit"
-                className="w-full bg-[#1a4d2e] hover:bg-[#2d5016] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full bg-[#1a4d2e] hover:bg-[#2d5016] text-white px-8 py-5 rounded-full font-semibold text-lg sm:text-xl transition-all shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#1a4d2e] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center mt-4"
                 disabled={isSubmitting || formSubmitted}
                 aria-label="Submit email signup form"
               >
